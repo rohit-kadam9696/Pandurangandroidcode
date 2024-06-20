@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserRoleChangeActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clroleassign"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:background="@color/bggrey"
+            android:paddingBottom="@dimen/normal_margin"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtempCoderolelbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/control_margin"
+                android:text="@string/employeecode"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintBottom_toBottomOf="@+id/edtempcoderole"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/edtempcoderole" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtcollon1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:text="@string/colon"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintBottom_toBottomOf="@+id/edtempcoderole"
+                app:layout_constraintStart_toEndOf="@+id/txtempCoderolelbl"
+                app:layout_constraintTop_toTopOf="@+id/edtempcoderole" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtempcoderole"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:imeOptions="actionDone"
+                android:inputType="numberSigned"
+                android:maxLength="10"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtcollon1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtemployeecode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/control_margin"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/edtempcoderole"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/edtempcoderole" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtrolecode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/control_margin"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/edtempcoderole"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/edtempcoderole" />
+
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btnsearchemployee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/control_margin"
+                android:layout_marginBottom="@dimen/control_margin"
+                android:background="@android:color/transparent"
+                android:padding="@dimen/normal_margin"
+                android:src="@drawable/ic_search"
+                app:layout_constraintBottom_toBottomOf="@+id/edtempcoderole"
+                app:layout_constraintRight_toRightOf="@+id/edtempcoderole"
+                app:layout_constraintTop_toTopOf="@+id/edtempcoderole" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtusernamelbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:text="@string/name"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintBottom_toBottomOf="@+id/sspuser"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/sspuser" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtcollon5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:text="@string/colon"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintBottom_toBottomOf="@+id/sspuser"
+                app:layout_constraintStart_toEndOf="@+id/txtusernamelbl"
+                app:layout_constraintTop_toTopOf="@+id/sspuser" />
+
+            <com.twd.multispinnerfilter.SingleSpinnerSearch
+                android:id="@+id/sspuser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:background="@drawable/spinnerstyle"
+                android:contentDescription="@string/select"
+                app:hintText="@string/select"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtcollon5"
+                app:layout_constraintTop_toBottomOf="@+id/edtempcoderole"
+                app:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtnamelbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:padding="@dimen/normal_margin"
+                android:text="@string/name"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintBottom_toBottomOf="@+id/txtnametxt"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/txtnametxt" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtcollon2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:text="@string/colon"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintBottom_toBottomOf="@+id/txtnametxt"
+                app:layout_constraintStart_toEndOf="@+id/txtnamelbl"
+                app:layout_constraintTop_toTopOf="@+id/txtnametxt" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtnametxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:contentDescription="@string/select"
+                app:hintText="@string/select"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtcollon2"
+                app:layout_constraintTop_toBottomOf="@+id/sspuser"
+                app:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtcurrentrolelbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:text="@string/currentrole"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintBottom_toBottomOf="@+id/txtcurrentroletxt"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/txtcurrentroletxt" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtcollon3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:text="@string/colon"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintBottom_toBottomOf="@+id/txtcurrentroletxt"
+                app:layout_constraintStart_toEndOf="@+id/txtcurrentrolelbl"
+                app:layout_constraintTop_toTopOf="@+id/txtcurrentroletxt" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtcurrentroletxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:contentDescription="@string/select"
+                app:hintText="@string/select"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtcollon3"
+                app:layout_constraintTop_toBottomOf="@+id/txtnametxt"
+                app:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtnewrolelbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:text="@string/newrole"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintBottom_toBottomOf="@+id/sspnewrole"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/sspnewrole" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtcollon4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:text="@string/colon"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintBottom_toBottomOf="@+id/sspnewrole"
+                app:layout_constraintStart_toEndOf="@+id/txtnewrolelbl"
+                app:layout_constraintTop_toTopOf="@+id/sspnewrole" />
+
+            <com.twd.multispinnerfilter.SingleSpinnerSearch
+                android:id="@+id/sspnewrole"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:background="@drawable/spinnerstyle"
+                android:contentDescription="@string/select"
+                app:hintText="@string/select"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtcollon3"
+                app:layout_constraintTop_toBottomOf="@+id/txtcurrentroletxt"
+                app:textColor="@color/black" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llbtns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:background="@color/bggrey"
+            android:orientation="horizontal"
+            android:padding="@dimen/normal_margin"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clroleassign">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btncancel"
+                style="@style/App_ButtonRedStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:layout_weight="1"
+                android:text="@string/cancel"
+                android:textSize="@dimen/normaltext"
+                android:visibility="visible" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnsubmit"
+                style="@style/App_ButtonGreenStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:layout_weight="1"
+                android:text="@string/submit"
+                android:textSize="@dimen/normaltext"
+                android:visibility="visible" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

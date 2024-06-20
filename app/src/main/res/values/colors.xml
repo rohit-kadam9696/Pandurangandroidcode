@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="whitetrans">#E6FFFFFF</color>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryVarient">#384BB8</color>
+    <color name="colorSecondary">#FF4081</color>
+    <color name="colorSecondaryVarient">#DD346D</color>
+    <color name="errorblack">#000000</color>
+
+    <!-- style -->
+    <color name="action_bar_color">#00619E</color>
+    <color name="colorMgmtText">#0101BA</color>
+
+    <color name="textviewtextcolor">@color/black</color>
+    <color name="edittextbackground">@color/white</color>
+    <color name="edittextstrokecolor">#EE999999</color>
+    <color name="edittexttextcolorstyle">#444444</color>
+    <color name="edittexttextcolorstylehint">#E6B9B9B9</color>
+    <color name="btngreencolordiable">#B2459969</color>
+    <color name="btngreencolor">#459969</color>
+    <color name="btngreencolorpressed">#478B64</color>
+    <color name="btnredcolorpressed">#D64537</color>
+    <color name="btnredcolor">#ea4b3c</color>
+    <color name="btnredcolordiable">#B2EA4B3C</color>
+    <color name="appbuttontextcolor">#FFFFFF</color>
+    <color name="layer2backcolor">#FF45B8FF</color>
+    <color name="layer2storkecolor">#FF0091EA</color>
+    <color name="layer1storkecolor">#FF0091EA</color>
+
+    <color name="radiocolor">#FFFFFF</color>
+    <color name="radiobackground">#FF45B8FF</color>
+    <color name="errorText">#F44336</color>
+    <color name="btnyellowcolor">#FFDE3D</color>
+    <color name="btnyellowcolorpressed">#E7C937</color>
+    <color name="btnyellowcolordiable">#B2FFDE3D</color>
+    <color name="appbuttontextcolorblack">@color/black</color>
+    <color name="btnbluecolor">#24A0ED</color>
+    <color name="btnbluecolorpressed">#2191D6</color>
+    <color name="btnbluecolordiable">#B224A0ED</color>
+
+
+    <color name="namecolorstart">#006DB1</color>
+    <color name="namecolorend">#66B9EE</color>
+    <color name="green_500">#4CAF50</color>
+    <color name="spinnerstrokecolor">#EE999999</color>
+    <color name="spinnerbgcolor">#FFFFFF</color>
+    <color name="bggrey">#f2f3f5</color>
+    <color name="mapcolor">#254285F4</color>
+    <color name="neavyblue">#000080</color>
+
+    <color name="tablehead">#004977</color>
+    <color name="tableeven">#cee9f2</color>
+    <color name="tableodd">#f6f8f9</color>
+    <color name="tablefoot">#00619E</color>
+
+
+    <color name="tableheadpdf">#C8C8C8</color>
+    <color name="tableoddpdf">#FFFFFF</color>
+    <color name="tableevenpdf">#dddddd</color>
+    <color name="tabletotalpdf">#C8C8C8</color>
+    <color name="navyblue">#000080</color>
+</resources>

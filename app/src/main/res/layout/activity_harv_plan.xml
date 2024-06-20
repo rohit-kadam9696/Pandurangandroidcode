@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HarvPlanActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clharvpro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/control_margin"
+        android:background="@color/bggrey"
+        android:padding="@dimen/normal_margin"
+        android:paddingTop="@dimen/control_margin"
+        android:paddingBottom="@dimen/control_margin"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtplantdatrefromlbl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/plantationdatefrom"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.46" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtplantdatrefrom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_margin"
+            android:layout_marginEnd="@dimen/normal_margin"
+            android:layout_marginBottom="@dimen/normal_margin"
+            android:focusableInTouchMode="false"
+            android:gravity="center"
+            android:hint="@string/plantationdatefromhint"
+            android:maxLength="10"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtplantdatrefromlbl"
+            app:layout_constraintWidth_percent="0.46"
+            app:textColor="@color/black" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtplantdatretolbl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/control_margin"
+            android:gravity="center"
+            android:text="@string/plantationdateto"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintLeft_toRightOf="@id/txtplantdatrefromlbl"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.46" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtplantdatreto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_margin"
+            android:layout_marginBottom="@dimen/normal_margin"
+            android:focusableInTouchMode="false"
+            android:gravity="center"
+            android:hint="@string/plantationdatetohint"
+            android:maxLength="10"
+            app:layout_constraintLeft_toRightOf="@id/edtplantdatrefrom"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtplantdatretolbl"
+            app:layout_constraintWidth_percent="0.46"
+            app:textColor="@color/black" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txthangamlbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/control_margin"
+            android:layout_marginTop="@dimen/control_margin"
+            android:text="@string/hangam"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtplantdatreto" />
+
+        <com.twd.multispinnerfilter.MultiSpinnerSearch
+            android:id="@+id/msphangam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:background="@drawable/spinnerstyle"
+            app:hintText="@string/select"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txthangamlbl"
+            app:textColor="@color/black" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtvarietylbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/control_margin"
+            android:layout_marginTop="@dimen/control_margin"
+            android:text="@string/variety"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/msphangam" />
+
+        <com.twd.multispinnerfilter.MultiSpinnerSearch
+            android:id="@+id/mspvariety"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:background="@drawable/spinnerstyle"
+            app:hintText="@string/select"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtvarietylbl"
+            app:textColor="@color/black" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llbtns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/control_margin"
+        android:background="@color/bggrey"
+        android:orientation="horizontal"
+        android:padding="@dimen/normal_margin"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clharvpro">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnprev"
+            style="@style/App_ButtonRedStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:layout_weight="1"
+            android:text="@string/prev"
+            android:textSize="@dimen/normaltext"
+            android:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnsubmit"
+            style="@style/App_ButtonGreenStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:layout_weight="1"
+            android:text="@string/submit"
+            android:textSize="@dimen/normaltext"
+            android:visibility="visible" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

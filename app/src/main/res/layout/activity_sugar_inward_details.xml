@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SugarInwardDetailsActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clstep1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clsugarinfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/control_margin"
+                android:background="@color/bggrey"
+                android:paddingTop="@dimen/normal_margin"
+                android:paddingBottom="@dimen/normal_margin"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtlocationlbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal_margin"
+                    android:minWidth="@dimen/minwidth2"
+                    android:padding="@dimen/normal_margin"
+                    android:text="@string/location"
+                    android:textSize="@dimen/normaltext"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtcollon1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal_margin"
+                    android:padding="@dimen/normal_margin"
+                    android:text="@string/colon"
+                    android:textSize="@dimen/normaltext"
+                    app:layout_constraintLeft_toRightOf="@+id/txtlocationlbl"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtlocationval"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal_margin"
+                    android:padding="@dimen/normal_margin"
+                    android:textSize="@dimen/normaltext"
+                    app:layout_constraintLeft_toRightOf="@+id/txtcollon1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtsectionid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/normal_margin"
+                    android:textSize="@dimen/normaltext"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtsugarseasonlbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal_margin"
+                    android:minWidth="@dimen/minwidth2"
+                    android:padding="@dimen/normal_margin"
+                    android:text="@string/sugarseason"
+                    android:textSize="@dimen/normaltext"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtlocationlbl" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtcollon2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal_margin"
+                    android:padding="@dimen/normal_margin"
+                    android:text="@string/colon"
+                    android:textSize="@dimen/normaltext"
+                    app:layout_constraintLeft_toRightOf="@+id/txtsugarseasonlbl"
+                    app:layout_constraintTop_toBottomOf="@+id/txtlocationlbl" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtsugarseasonval"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal_margin"
+                    android:padding="@dimen/normal_margin"
+                    android:textSize="@dimen/normaltext"
+                    app:layout_constraintLeft_toRightOf="@+id/txtcollon2"
+                    app:layout_constraintTop_toBottomOf="@+id/txtlocationlbl" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtsugarforlbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal_margin"
+                    android:minWidth="@dimen/minwidth2"
+                    android:padding="@dimen/normal_margin"
+                    android:text="@string/sugarfor"
+                    android:textSize="@dimen/normaltext"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtsugarseasonlbl" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtcollon3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal_margin"
+                    android:padding="@dimen/normal_margin"
+                    android:text="@string/colon"
+                    android:textSize="@dimen/normaltext"
+                    app:layout_constraintLeft_toRightOf="@+id/txtsugarforlbl"
+                    app:layout_constraintTop_toBottomOf="@+id/txtsugarseasonlbl" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtsugarforval"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal_margin"
+                    android:padding="@dimen/normal_margin"
+                    android:textSize="@dimen/normaltext"
+                    app:layout_constraintLeft_toRightOf="@+id/txtcollon3"
+                    app:layout_constraintTop_toBottomOf="@+id/txtsugarseasonlbl" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtemployeelbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal_margin"
+                    android:minWidth="@dimen/minwidth2"
+                    android:padding="@dimen/normal_margin"
+                    android:text="@string/employee"
+                    android:textSize="@dimen/normaltext"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtsugarforlbl" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtcollon4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal_margin"
+                    android:padding="@dimen/normal_margin"
+                    android:text="@string/colon"
+                    android:textSize="@dimen/normaltext"
+                    app:layout_constraintLeft_toRightOf="@+id/txtemployeelbl"
+                    app:layout_constraintTop_toBottomOf="@+id/txtsugarforlbl" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtemployeeval"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal_margin"
+                    android:padding="@dimen/normal_margin"
+                    app:layout_constraintLeft_toRightOf="@+id/txtcollon4"
+                    app:layout_constraintTop_toBottomOf="@+id/txtsugarforlbl" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtvehiclenolbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal_margin"
+                    android:minWidth="@dimen/minwidth2"
+                    android:padding="@dimen/normal_margin"
+                    android:text="@string/vehicleno"
+                    android:textSize="@dimen/normaltext"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtemployeelbl" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtcollon5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal_margin"
+                    android:padding="@dimen/normal_margin"
+                    android:text="@string/colon"
+                    android:textSize="@dimen/normaltext"
+                    app:layout_constraintLeft_toRightOf="@+id/txtvehiclenolbl"
+                    app:layout_constraintTop_toBottomOf="@+id/txtemployeelbl" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtvehiclenoval"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal_margin"
+                    android:padding="@dimen/normal_margin"
+                    app:layout_constraintLeft_toRightOf="@+id/txtcollon5"
+                    app:layout_constraintTop_toBottomOf="@+id/txtemployeelbl" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtsugarbaglbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal_margin"
+                    android:minWidth="@dimen/minwidth2"
+                    android:padding="@dimen/normal_margin"
+                    android:text="@string/sugarbag"
+                    android:textSize="@dimen/normaltext"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtvehiclenolbl" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtcollon6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal_margin"
+                    android:padding="@dimen/normal_margin"
+                    android:text="@string/colon"
+                    android:textSize="@dimen/normaltext"
+                    app:layout_constraintLeft_toRightOf="@+id/txtsugarbaglbl"
+                    app:layout_constraintTop_toBottomOf="@+id/txtvehiclenolbl" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtsugarbagval"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal_margin"
+                    android:padding="@dimen/normal_margin"
+                    app:layout_constraintLeft_toRightOf="@+id/txtcollon6"
+                    app:layout_constraintTop_toBottomOf="@+id/txtvehiclenolbl" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtvajanprakarlbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal_margin"
+                    android:minWidth="@dimen/minwidth2"
+                    android:padding="@dimen/normal_margin"
+                    android:text="@string/vajanprakar"
+                    android:textSize="@dimen/normaltext"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtsugarbaglbl" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtcollon7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal_margin"
+                    android:padding="@dimen/normal_margin"
+                    android:text="@string/colon"
+                    android:textSize="@dimen/normaltext"
+                    app:layout_constraintLeft_toRightOf="@+id/txtvajanprakarlbl"
+                    app:layout_constraintTop_toBottomOf="@+id/txtsugarbaglbl" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtvajanprakarval"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal_margin"
+                    android:padding="@dimen/normal_margin"
+                    app:layout_constraintLeft_toRightOf="@+id/txtcollon7"
+                    app:layout_constraintTop_toBottomOf="@+id/txtsugarbaglbl" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtvajanprakaruni"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal_margin"
+                    android:text="@string/kilo"
+                    android:padding="@dimen/normal_margin"
+                    app:layout_constraintLeft_toRightOf="@+id/txtvajanprakarval"
+                    app:layout_constraintTop_toBottomOf="@+id/txtsugarbaglbl" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtsugarweightlbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal_margin"
+                    android:minWidth="@dimen/minwidth2"
+                    android:padding="@dimen/normal_margin"
+                    android:text="@string/sugarweight"
+                    android:textSize="@dimen/normaltext"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtvajanprakarlbl" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtcollon8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal_margin"
+                    android:padding="@dimen/normal_margin"
+                    android:text="@string/colon"
+                    android:textSize="@dimen/normaltext"
+                    app:layout_constraintLeft_toRightOf="@+id/txtsugarweightlbl"
+                    app:layout_constraintTop_toBottomOf="@+id/txtvajanprakarlbl" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtsugarweightval"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal_margin"
+                    android:padding="@dimen/normal_margin"
+                    app:layout_constraintLeft_toRightOf="@+id/txtcollon8"
+                    app:layout_constraintTop_toBottomOf="@+id/txtvajanprakarlbl" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtsugarweightuni"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal_margin"
+                    android:padding="@dimen/normal_margin"
+                    android:text="@string/quintal"
+                    app:layout_constraintLeft_toRightOf="@+id/txtsugarweightval"
+                    app:layout_constraintTop_toBottomOf="@+id/txtvajanprakarlbl" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llbtns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:background="@color/bggrey"
+            android:orientation="horizontal"
+            android:padding="@dimen/normal_margin"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clphoto">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnprev"
+                style="@style/App_ButtonRedStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:layout_weight="1"
+                android:text="@string/prev"
+                android:textSize="@dimen/normaltext"
+                android:visibility="visible" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnsubmit"
+                style="@style/App_ButtonGreenStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:layout_weight="1"
+                android:text="@string/submit"
+                android:textSize="@dimen/normaltext"
+                android:visibility="visible" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</ScrollView>

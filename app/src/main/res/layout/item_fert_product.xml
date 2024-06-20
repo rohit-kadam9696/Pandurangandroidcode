@@ -1,0 +1,231 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ncregistrationcard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:minHeight="120dp"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="20dp">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtsubstoreid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtproductid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtproductname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:text="@string/defaultcount"
+                app:layout_constraintStart_toEndOf="@+id/txtproductid"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtstock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:text="@string/stockfert"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtproductname" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtqty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:text="@string/nag"
+                app:layout_constraintBottom_toBottomOf="@+id/edtquantity"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtstock"
+                app:layout_constraintTop_toTopOf="@+id/edtquantity" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtquantity"
+                android:layout_width="@dimen/minwidthmin"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:inputType="number"
+                android:padding="0dp"
+                android:imeOptions="actionDone"
+                android:paddingStart="@dimen/normal_margin"
+                android:textSize="@dimen/snormaltext"
+                app:layout_constraintStart_toEndOf="@+id/txtqty"
+                app:layout_constraintTop_toBottomOf="@+id/txtstock" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtunitid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/edtquantity"
+                app:layout_constraintStart_toEndOf="@+id/edtquantity"
+                app:layout_constraintTop_toTopOf="@+id/edtquantity" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txthsnid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/edtquantity"
+                app:layout_constraintStart_toEndOf="@+id/edtquantity"
+                app:layout_constraintTop_toTopOf="@+id/edtquantity" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtunit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                app:layout_constraintBottom_toBottomOf="@+id/edtquantity"
+                app:layout_constraintStart_toEndOf="@+id/edtquantity"
+                app:layout_constraintTop_toTopOf="@+id/edtquantity" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtrate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:text="@string/rate"
+                app:layout_constraintBottom_toBottomOf="@+id/txtrateval"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtquantity"
+                app:layout_constraintTop_toTopOf="@+id/txtrateval" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtrateval"
+                android:layout_width="@dimen/minwidthmin"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:focusableInTouchMode="false"
+                android:padding="0dp"
+                android:paddingStart="@dimen/normal_margin"
+                android:textSize="@dimen/snormaltext"
+                app:layout_constraintStart_toEndOf="@+id/txtrate"
+                app:layout_constraintTop_toBottomOf="@+id/edtquantity" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llrate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:minWidth="@dimen/width150"
+                android:orientation="horizontal"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toBottomOf="@+id/txtrateval"
+                app:layout_constraintStart_toEndOf="@+id/txtrateval"
+                app:layout_constraintTop_toTopOf="@+id/txtrateval">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/normal_margin"
+                    android:minWidth="@dimen/minwidthmin2"
+                    android:text="@string/total"
+                    android:textSize="@dimen/ssnormaltext" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/colon"
+                    android:textSize="@dimen/ssnormaltext" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txttotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/minwidthmin2"
+                    android:textSize="@dimen/ssnormaltext" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txttax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:text="@string/tax"
+                app:layout_constraintBottom_toBottomOf="@+id/txttaxval"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/txttaxval" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txttaxval"
+                android:layout_width="@dimen/minwidthmin3"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:padding="0dp"
+                android:paddingStart="@dimen/normal_margin"
+                android:textSize="@dimen/snormaltext"
+                app:layout_constraintStart_toEndOf="@+id/txttax"
+                app:layout_constraintTop_toBottomOf="@+id/txtrateval" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/lltax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:orientation="horizontal"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toBottomOf="@+id/txttaxval"
+                app:layout_constraintStart_toEndOf="@+id/txttaxval"
+                app:layout_constraintTop_toTopOf="@+id/txttaxval">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/normal_margin"
+                    android:minWidth="@dimen/minwidthmin2"
+                    android:text="@string/totaltax"
+                    android:textSize="@dimen/ssnormaltext" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/colon"
+                    android:textSize="@dimen/ssnormaltext" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txttotaltax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/minwidthmin2"
+                    android:textSize="@dimen/ssnormaltext" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.cardview.widget.CardView>

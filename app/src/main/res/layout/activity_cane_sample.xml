@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CaneSampleActivity">
+
+    <include layout="@layout/common_cane_sample" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/control_margin"
+        android:background="@color/bggrey"
+        android:paddingTop="@dimen/normal_margin"
+        android:paddingBottom="@dimen/normal_margin"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clfarmer">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtbrixlbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:minWidth="@dimen/minwidth2"
+            android:text="@string/brix"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintBottom_toBottomOf="@id/edtbrix"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/edtbrix" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtcscollon1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:text="@string/colon"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintBottom_toBottomOf="@id/edtbrix"
+            app:layout_constraintStart_toEndOf="@+id/txtbrixlbl"
+            app:layout_constraintTop_toTopOf="@id/edtbrix" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtbrix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:hint="@string/enterbrix"
+            android:imeOptions="actionNext"
+            android:inputType="numberDecimal"
+            android:maxLength="50"
+            android:text="@string/perunder"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtcscollon1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:textColor="@color/black">
+
+            <requestFocus />
+        </androidx.appcompat.widget.AppCompatEditText>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtpolelbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:minWidth="@dimen/minwidth2"
+            android:text="@string/pole"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintBottom_toBottomOf="@id/edtpole"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtbrixlbl"
+            app:layout_constraintTop_toTopOf="@id/edtpole" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtcscollon2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:text="@string/colon"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintBottom_toBottomOf="@id/edtpole"
+            app:layout_constraintStart_toEndOf="@+id/txtpolelbl"
+            app:layout_constraintTop_toBottomOf="@id/txtcscollon1"
+            app:layout_constraintTop_toTopOf="@id/edtpole" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtpole"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:imeOptions="actionNext"
+            android:inputType="numberDecimal"
+            android:maxLength="50"
+            android:text="@string/perunder"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtcscollon2"
+            app:layout_constraintTop_toBottomOf="@id/edtbrix"
+            app:textColor="@color/black" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtpuritylbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:minWidth="@dimen/minwidth2"
+            android:text="@string/purity"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintBottom_toBottomOf="@id/edtpurity"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtpolelbl"
+            app:layout_constraintTop_toTopOf="@id/edtpurity" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtcscollon3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:text="@string/colon"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintBottom_toBottomOf="@id/edtpurity"
+            app:layout_constraintStart_toEndOf="@+id/txtpuritylbl"
+            app:layout_constraintTop_toBottomOf="@id/txtcscollon2"
+            app:layout_constraintTop_toTopOf="@id/edtpurity" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/edtpurity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:paddingTop="@dimen/control_margin"
+            android:paddingBottom="@dimen/normal_margin"
+            app:layout_constraintStart_toEndOf="@+id/txtcscollon3"
+            app:layout_constraintTop_toBottomOf="@id/edtpole"
+            app:textColor="@color/black" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtrecoverylbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:minWidth="@dimen/minwidth2"
+            android:text="@string/recovery"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintBottom_toBottomOf="@id/edtrecovery"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtpuritylbl"
+            app:layout_constraintTop_toTopOf="@id/edtrecovery" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtcscollon4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:text="@string/colon"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintBottom_toBottomOf="@id/edtrecovery"
+            app:layout_constraintStart_toEndOf="@+id/txtrecoverylbl"
+            app:layout_constraintTop_toBottomOf="@id/txtcscollon3"
+            app:layout_constraintTop_toTopOf="@id/edtrecovery" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtrecovery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:imeOptions="actionDone"
+            android:inputType="numberDecimal"
+            android:maxLength="50"
+            android:text="@string/perunder"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtcscollon4"
+            app:layout_constraintTop_toBottomOf="@id/edtpurity"
+            app:textColor="@color/black" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llbtns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/control_margin"
+        android:background="@color/bggrey"
+        android:orientation="horizontal"
+        android:padding="@dimen/normal_margin"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clinfo">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnprev"
+            style="@style/App_ButtonRedStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:layout_weight="1"
+            android:text="@string/prev"
+            android:textSize="@dimen/normaltext"
+            android:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnsubmit"
+            style="@style/App_ButtonGreenStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:layout_weight="1"
+            android:text="@string/submit"
+            android:textSize="@dimen/normaltext"
+            android:visibility="visible" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

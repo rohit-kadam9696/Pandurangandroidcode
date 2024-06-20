@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".OTP_Activity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/extramargin"
+        android:background="@color/whitetrans"
+        android:paddingBottom="@dimen/extramargin"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/verifyotptextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/extramargin"
+            android:layout_marginTop="@dimen/control_margin"
+            android:layout_marginEnd="@dimen/extramargin"
+            android:layout_marginBottom="@dimen/control_margin"
+            android:text="@string/verifyotptext"
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/changemobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/extramargin"
+            android:layout_marginEnd="@dimen/extramargin"
+            android:layout_marginBottom="@dimen/control_margin"
+            android:text="@string/changemobile"
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/verifyotptextview" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/verifyotp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/extramargin"
+            android:layout_marginTop="@dimen/control_margin"
+            android:layout_marginEnd="@dimen/extramargin"
+            android:layout_marginBottom="@dimen/control_margin"
+            android:ems="10"
+            android:hint="@string/verifyotphint"
+            android:imeOptions="actionDone"
+            android:inputType="phone"
+            android:maxLength="10"
+            app:layout_constraintTop_toBottomOf="@+id/changemobile">
+
+            <requestFocus />
+        </androidx.appcompat.widget.AppCompatEditText>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/countdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:text="@string/resendcount"
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/verifyotp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/resend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/control_margin"
+            android:layout_marginTop="@dimen/control_margin"
+            android:text="@string/resend"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/verifyotp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnverify"
+            style="@style/App_ButtonGreenStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/extramargin"
+            android:layout_marginTop="@dimen/control_margin"
+            android:layout_marginEnd="@dimen/extramargin"
+            android:layout_marginBottom="@dimen/extramargin"
+            android:text="@string/verify"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/countdown" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

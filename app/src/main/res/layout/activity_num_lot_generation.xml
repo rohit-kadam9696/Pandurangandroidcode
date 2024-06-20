@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NumLotGenerationActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clmain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:background="@color/bggrey"
+            android:padding="@dimen/normal_margin"
+            android:paddingTop="@dimen/control_margin"
+            android:paddingBottom="@dimen/control_margin"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtyardlbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:gravity="center_vertical"
+                android:minWidth="@dimen/minwidthmin3"
+                android:padding="@dimen/normal_margin"
+                android:text="@string/yard"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintBottom_toBottomOf="@id/sspyard"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@id/sspyard" />
+
+            <com.twd.multispinnerfilter.SingleSpinnerSearch
+                android:id="@+id/sspyard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:background="@drawable/spinnerstyle"
+                android:contentDescription="@string/select"
+                app:hintText="@string/select"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtyardlbl"
+                app:layout_constraintTop_toTopOf="parent"
+                app:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtvehiclegrouplbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:gravity="center_vertical"
+                android:minWidth="@dimen/minwidthmin3"
+                android:padding="@dimen/normal_margin"
+                android:text="@string/group"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintBottom_toBottomOf="@id/sspvehiclegroup"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@id/sspvehiclegroup" />
+
+            <com.twd.multispinnerfilter.SingleSpinnerSearch
+                android:id="@+id/sspvehiclegroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:background="@drawable/spinnerstyle"
+                android:contentDescription="@string/select"
+                app:hintText="@string/select"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtvehiclegrouplbl"
+                app:layout_constraintTop_toBottomOf="@+id/sspyard"
+                app:textColor="@color/black" />
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llbtns"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:background="@color/bggrey"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sspvehiclegroup">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnback"
+                    style="@style/App_ButtonRedStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal_margin"
+                    android:layout_weight="1"
+                    android:text="@string/back"
+                    android:textSize="@dimen/normaltext"
+                    android:visibility="visible" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnsubmit"
+                    style="@style/App_ButtonGreenStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal_margin"
+                    android:layout_weight="1"
+                    android:text="@string/submit"
+                    android:textSize="@dimen/normaltext"
+                    android:visibility="visible" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txthead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/snormaltext"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clmain" />
+
+        <HorizontalScrollView
+            android:id="@+id/hsvlot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txthead">
+
+            <TableLayout
+                android:id="@+id/tbldata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </HorizontalScrollView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnclear"
+            style="@style/App_ButtonRedStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:text="@string/clear"
+            android:textSize="@dimen/normaltext"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hsvlot"
+            app:layout_constraintWidth_percent="0.45"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnexclude"
+            style="@style/App_ButtonGreenStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:text="@string/excludelot"
+            android:textSize="@dimen/normaltext"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hsvlot"
+            app:layout_constraintWidth_percent="0.45"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnexportpdf"
+            style="@style/App_ButtonBlueStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:text="@string/pdf"
+            android:textSize="@dimen/normaltext"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hsvlot"
+            app:layout_constraintWidth_percent="0.45"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnprint"
+            style="@style/App_ButtonGreenStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:text="@string/print"
+            android:textSize="@dimen/normaltext"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hsvlot"
+            app:layout_constraintWidth_percent="0.22"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

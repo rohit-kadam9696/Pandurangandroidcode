@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlantAreaCalcuationActivity">
+
+    <include
+        android:id="@+id/location"
+        layout="@layout/common_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clmap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bggrey"
+        app:layout_constrainedWidth="true"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toTopOf="@id/clother"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/location">
+
+        <fragment
+            android:id="@+id/map"
+            class="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/normal_margin"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clother"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bggrey"
+        android:paddingTop="@dimen/normal_margin"
+        android:paddingBottom="@dimen/normal_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llbtnmaps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bggrey"
+            android:orientation="horizontal"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btntakepoint"
+                style="@style/App_ButtonBlueStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/normal_margin"
+                android:layout_weight="1"
+                android:text="@string/takepoint"
+                android:textSize="@dimen/ssnormaltext" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnundo"
+                style="@style/App_ButtonBlueStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/normal_margin"
+                android:layout_weight="1"
+                android:text="@string/undo"
+                android:textSize="@dimen/ssnormaltext" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnclear"
+                style="@style/App_ButtonRedStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/normal_margin"
+                android:layout_weight="1"
+                android:text="@string/clear"
+                android:textSize="@dimen/ssnormaltext" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtgpsarealbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_margin"
+            android:minWidth="@dimen/minwidth2"
+            android:text="@string/gpsarea"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llbtnmaps" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtcollon17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/colon"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintStart_toEndOf="@+id/txtgpsarealbl"
+            app:layout_constraintTop_toBottomOf="@+id/llbtnmaps" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtgpsareatxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_margin"
+            android:layout_marginEnd="@dimen/normal_margin"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintStart_toEndOf="@+id/txtcollon17"
+            app:layout_constraintTop_toBottomOf="@+id/llbtnmaps" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txthectorlbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_margin"
+            android:layout_marginEnd="@dimen/normal_margin"
+            android:text="@string/hector"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintStart_toEndOf="@+id/txtgpsareatxt"
+            app:layout_constraintTop_toBottomOf="@+id/llbtnmaps" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llbtns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bggrey"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtgpsareatxt">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnprev"
+                style="@style/App_ButtonRedStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:layout_weight="1"
+                android:text="@string/prev"
+                android:textSize="@dimen/normaltext"
+                android:visibility="visible" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnnext"
+                style="@style/App_ButtonBlueStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:layout_weight="1"
+                android:text="@string/next"
+                android:textSize="@dimen/normaltext"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnsubmit"
+                style="@style/App_ButtonGreenStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:layout_weight="1"
+                android:text="@string/next"
+                android:textSize="@dimen/normaltext"
+                android:visibility="visible" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnskip"
+                style="@style/App_ButtonRedStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:layout_weight="1"
+                android:text="SKIP"
+                android:textSize="@dimen/normaltext"
+                android:visibility="gone" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

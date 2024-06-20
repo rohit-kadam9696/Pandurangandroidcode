@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".NondConfirmjaActivity"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnjune"
+        style="@style/App_ButtonBlueStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/extramargin"
+        android:layout_marginEnd="@dimen/extramargin"
+        android:layout_marginTop="@dimen/extramargin"
+        android:text="@string/june"
+        android:textSize="@dimen/xxheadtext"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnaug"
+        style="@style/App_ButtonBlueStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/extramargin"
+        android:layout_marginEnd="@dimen/extramargin"
+        android:layout_marginTop="@dimen/extramargin"
+        android:text="@string/aug"
+        android:textSize="@dimen/xxheadtext"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnjune" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnreconfirm"
+        style="@style/App_ButtonBlueStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/extramargin"
+        android:layout_marginEnd="@dimen/extramargin"
+        android:layout_marginTop="@dimen/extramargin"
+        android:text="@string/reconfirm"
+        android:textSize="@dimen/xxheadtext"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnjune" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

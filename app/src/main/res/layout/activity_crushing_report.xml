@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CrushingReportActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".CrushingReportActivity">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtreportdatelbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:padding="@dimen/normal_margin"
+            android:text="@string/datedinak"
+            android:textColor="@color/colorMgmtText"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtreportdate"
+            android:layout_width="@dimen/width150"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:focusableInTouchMode="false"
+            android:hint="@string/selectdate"
+            android:minWidth="@dimen/minwidth"
+            android:textColor="@color/colorMgmtText"
+            android:maxLength="10"
+            android:maxWidth="@dimen/width"
+            app:layout_constraintLeft_toRightOf="@+id/txtreportdatelbl"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txthangamdaylbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:padding="@dimen/normal_margin"
+            android:text="@string/hangamdivas"
+            android:textColor="@color/colorMgmtText"
+            android:textAlignment="textEnd"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintLeft_toRightOf="@+id/edtreportdate"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txthangamday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:textColor="@color/colorMgmtText"
+            android:padding="@dimen/normal_margin"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintStart_toEndOf="@+id/txthangamdaylbl"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtdailycrushingheadlbl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:minWidth="@dimen/minwidth"
+            android:text="@string/dailycrushing"
+            android:textColor="@color/colorMgmtText"
+            android:textSize="@dimen/normaltext"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txthangamday" />
+
+        <HorizontalScrollView
+            android:id="@+id/hsvcrushing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/control_margin"
+            android:layout_marginEnd="@dimen/control_margin"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtdailycrushingheadlbl">
+
+            <TableLayout
+                android:id="@+id/tbldailycrushing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </HorizontalScrollView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtlabreportheadlbl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:minWidth="@dimen/minwidth"
+            android:textColor="@color/colorMgmtText"
+            android:text="@string/labreport"
+            android:textSize="@dimen/normaltext"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hsvcrushing" />
+
+
+        <HorizontalScrollView
+            android:id="@+id/hsvlapreport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/control_margin"
+            android:layout_marginEnd="@dimen/control_margin"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtlabreportheadlbl">
+
+            <TableLayout
+                android:id="@+id/tbllabreport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </HorizontalScrollView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtramaincaneheadlbl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:minWidth="@dimen/minwidth"
+            android:textColor="@color/colorMgmtText"
+            android:text="@string/ramaincane"
+            android:textSize="@dimen/normaltext"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hsvlapreport" />
+
+
+        <HorizontalScrollView
+            android:id="@+id/hsvramaincane"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/control_margin"
+            android:layout_marginEnd="@dimen/control_margin"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtramaincaneheadlbl">
+
+            <TableLayout
+                android:id="@+id/tblramaincane"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </HorizontalScrollView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtsectiontonnageheadlbl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:minWidth="@dimen/minwidth"
+            android:textColor="@color/colorMgmtText"
+            android:text="@string/sectionhead"
+            android:textSize="@dimen/normaltext"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hsvramaincane" />
+
+
+        <HorizontalScrollView
+            android:id="@+id/hsvsectiontonnage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/control_margin"
+            android:layout_marginEnd="@dimen/control_margin"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtsectiontonnageheadlbl">
+
+            <TableLayout
+                android:id="@+id/tblsectiontonnage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </HorizontalScrollView>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtsectionnamelbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:minWidth="@dimen/minwidth"
+            android:textColor="@color/colorMgmtText"
+            android:padding="@dimen/normal_margin"
+            android:text="@string/section"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hsvsectiontonnage" />
+
+        <com.twd.multispinnerfilter.SingleSpinnerSearch
+            android:id="@+id/sspsection"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="@dimen/normal_margin"
+            android:background="@drawable/spinnerstyle"
+            app:hintText="@string/select"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintStart_toEndOf="@+id/txtsectionnamelbl"
+            app:layout_constraintTop_toBottomOf="@+id/hsvsectiontonnage"
+            app:textColor="@color/colorMgmtText" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtvilltonnageheadlbl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:minWidth="@dimen/minwidth"
+            android:textColor="@color/colorMgmtText"
+            android:text="@string/villtonnagehead"
+            android:textSize="@dimen/normaltext"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sspsection" />
+
+
+        <HorizontalScrollView
+            android:id="@+id/hsvvilltonnage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/control_margin"
+            android:layout_marginEnd="@dimen/control_margin"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtvilltonnageheadlbl">
+
+            <TableLayout
+                android:id="@+id/tblvilltonnage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </HorizontalScrollView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txthangamtonnageheadlbl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:minWidth="@dimen/minwidth"
+            android:textColor="@color/colorMgmtText"
+            android:text="@string/hangamhead"
+            android:textSize="@dimen/normaltext"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hsvvilltonnage" />
+
+
+        <HorizontalScrollView
+            android:id="@+id/hsvhangamtonnage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/control_margin"
+            android:layout_marginEnd="@dimen/control_margin"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txthangamtonnageheadlbl">
+
+            <TableLayout
+                android:id="@+id/tblhangamtonnage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </HorizontalScrollView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtvarietytonnageheadlbl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:minWidth="@dimen/minwidth"
+            android:textColor="@color/colorMgmtText"
+            android:text="@string/varietyhead"
+            android:textSize="@dimen/normaltext"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hsvhangamtonnage" />
+
+
+        <HorizontalScrollView
+            android:id="@+id/hsvvarietytonnage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/control_margin"
+            android:layout_marginEnd="@dimen/control_margin"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtvarietytonnageheadlbl">
+
+            <TableLayout
+                android:id="@+id/tblvarietytonnage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </HorizontalScrollView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtcropTypetonnageheadlbl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:minWidth="@dimen/minwidth"
+            android:textColor="@color/colorMgmtText"
+            android:text="@string/cropTypehead"
+            android:textSize="@dimen/normaltext"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hsvvarietytonnage" />
+
+
+        <HorizontalScrollView
+            android:id="@+id/hsvcropTypetonnage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/control_margin"
+            android:layout_marginEnd="@dimen/control_margin"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtcropTypetonnageheadlbl">
+
+            <TableLayout
+                android:id="@+id/tblcropTypetonnage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </HorizontalScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

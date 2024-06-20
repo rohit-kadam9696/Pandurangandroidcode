@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NumYardAssignActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clyardassign"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:background="@color/bggrey"
+            android:paddingBottom="@dimen/normal_margin"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtempCodeyardlbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/control_margin"
+                android:text="@string/employeecode"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintBottom_toBottomOf="@+id/edtempcodeyard"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/edtempcodeyard" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtcollon1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:text="@string/colon"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintBottom_toBottomOf="@+id/edtempcodeyard"
+                app:layout_constraintStart_toEndOf="@+id/txtempCodeyardlbl"
+                app:layout_constraintTop_toTopOf="@+id/edtempcodeyard" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtempcodeyard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:imeOptions="actionDone"
+                android:inputType="numberSigned"
+                android:maxLength="10"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtcollon1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtemployeecode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/control_margin"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/edtempcodeyard"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/edtempcodeyard" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtcodeyard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/control_margin"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/edtempcodeyard"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/edtempcodeyard" />
+
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btnsearchemployee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/control_margin"
+                android:layout_marginBottom="@dimen/control_margin"
+                android:background="@android:color/transparent"
+                android:padding="@dimen/normal_margin"
+                android:src="@drawable/ic_search"
+                app:layout_constraintBottom_toBottomOf="@+id/edtempcodeyard"
+                app:layout_constraintRight_toRightOf="@+id/edtempcodeyard"
+                app:layout_constraintTop_toTopOf="@+id/edtempcodeyard" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtnamelbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:padding="@dimen/normal_margin"
+                android:text="@string/name"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintBottom_toBottomOf="@+id/txtnametxt"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/txtnametxt" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtcollon2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:text="@string/colon"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintBottom_toBottomOf="@+id/txtnametxt"
+                app:layout_constraintStart_toEndOf="@+id/txtnamelbl"
+                app:layout_constraintTop_toTopOf="@+id/txtnametxt" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtnametxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:contentDescription="@string/select"
+                app:hintText="@string/select"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtcollon2"
+                app:layout_constraintTop_toBottomOf="@+id/edtempcodeyard"
+                app:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtcurrentyardlbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:text="@string/currentyard"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintBottom_toBottomOf="@+id/txtcurrentyardtxt"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/txtcurrentyardtxt" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtcollon3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:text="@string/colon"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintBottom_toBottomOf="@+id/txtcurrentyardtxt"
+                app:layout_constraintStart_toEndOf="@+id/txtcurrentyardlbl"
+                app:layout_constraintTop_toTopOf="@+id/txtcurrentyardtxt" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtcurrentyardtxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:contentDescription="@string/select"
+                app:hintText="@string/select"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtcollon3"
+                app:layout_constraintTop_toBottomOf="@+id/txtnametxt"
+                app:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btnremove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/control_margin"
+                android:layout_marginBottom="@dimen/control_margin"
+                android:background="@android:color/transparent"
+                android:padding="@dimen/normal_margin"
+                android:src="@drawable/ic_reject"
+                app:layout_constraintBottom_toBottomOf="@+id/txtcurrentyardtxt"
+                app:layout_constraintRight_toRightOf="@+id/txtcurrentyardtxt"
+                app:layout_constraintTop_toTopOf="@+id/txtcurrentyardtxt" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtnewyardlbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:text="@string/newyard"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintBottom_toBottomOf="@+id/sspnewyard"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/sspnewyard" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtcollon4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:text="@string/colon"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintBottom_toBottomOf="@+id/sspnewyard"
+                app:layout_constraintStart_toEndOf="@+id/txtnewyardlbl"
+                app:layout_constraintTop_toTopOf="@+id/sspnewyard" />
+
+            <com.twd.multispinnerfilter.SingleSpinnerSearch
+                android:id="@+id/sspnewyard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:background="@drawable/spinnerstyle"
+                android:contentDescription="@string/select"
+                app:hintText="@string/select"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtcollon3"
+                app:layout_constraintTop_toBottomOf="@+id/txtcurrentyardtxt"
+                app:textColor="@color/black" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llbtns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:background="@color/bggrey"
+            android:orientation="horizontal"
+            android:padding="@dimen/normal_margin"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clyardassign">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btncancel"
+                style="@style/App_ButtonRedStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:layout_weight="1"
+                android:text="@string/cancel"
+                android:textSize="@dimen/normaltext"
+                android:visibility="visible" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnsubmit"
+                style="@style/App_ButtonGreenStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:layout_weight="1"
+                android:text="@string/submit"
+                android:textSize="@dimen/normaltext"
+                android:visibility="visible" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FarmerBankinfoActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clfarmer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/control_margin"
+        android:background="@color/bggrey"
+        android:padding="@dimen/normal_margin"
+        android:paddingTop="@dimen/control_margin"
+        android:paddingBottom="@dimen/control_margin"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtfarmercodelbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:minWidth="@dimen/minwidth"
+            android:padding="@dimen/normal_margin"
+            android:text="@string/farmercode"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtfarmercodetxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:padding="@dimen/normal_margin"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintLeft_toRightOf="@+id/txtfarmercodelbl"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtfarmernamelbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:minWidth="@dimen/minwidth"
+            android:padding="@dimen/normal_margin"
+            android:text="@string/farmername"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtfarmercodelbl" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtfarmernametxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:padding="@dimen/normal_margin"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintLeft_toRightOf="@+id/txtfarmernamelbl"
+            app:layout_constraintTop_toBottomOf="@+id/txtfarmercodetxt" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtoldbanknamelbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:minWidth="@dimen/minwidth"
+            android:padding="@dimen/normal_margin"
+            android:text="@string/oldbankname"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtfarmernamelbl" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtoldbanknametxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:padding="@dimen/normal_margin"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintLeft_toRightOf="@+id/txtoldbanknamelbl"
+            app:layout_constraintTop_toBottomOf="@+id/txtfarmernametxt" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtoldbankifsclbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:minWidth="@dimen/minwidth"
+            android:padding="@dimen/normal_margin"
+            android:text="@string/oldbankifsc"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtoldbanknamelbl" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtoldbankifsctxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:padding="@dimen/normal_margin"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintLeft_toRightOf="@+id/txtoldbankifsclbl"
+            app:layout_constraintTop_toBottomOf="@+id/txtoldbanknametxt" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtoldbankaccnolbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:minWidth="@dimen/minwidth"
+            android:padding="@dimen/normal_margin"
+            android:text="@string/oldbankaccno"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtoldbankifsclbl" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtoldbankaccnotxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:padding="@dimen/normal_margin"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintLeft_toRightOf="@+id/txtoldbankaccnolbl"
+            app:layout_constraintTop_toBottomOf="@+id/txtoldbankifsctxt" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtbanknamelbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:minWidth="@dimen/minwidth"
+            android:padding="@dimen/normal_margin"
+            android:text="@string/bankname"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtoldbankaccnolbl" />
+
+        <com.twd.multispinnerfilter.SingleSpinnerSearch
+            android:id="@+id/sspbank"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="@dimen/normal_margin"
+            android:background="@drawable/spinnerstyle"
+            app:hintText="@string/select"
+            app:layout_constraintLeft_toRightOf="@+id/txtbanknamelbl"
+            app:layout_constraintTop_toBottomOf="@+id/txtoldbankaccnotxt"
+            app:textColor="@color/black" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtbranchnamelbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:minWidth="@dimen/minwidth"
+            android:padding="@dimen/normal_margin"
+            android:text="@string/branchname"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtbanknamelbl" />
+
+        <com.twd.multispinnerfilter.SingleSpinnerSearch
+            android:id="@+id/sspbranch"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="@dimen/normal_margin"
+            android:background="@drawable/spinnerstyle"
+            app:hintText="@string/select"
+            app:layout_constraintLeft_toRightOf="@+id/txtbranchnamelbl"
+            app:layout_constraintTop_toBottomOf="@+id/sspbank"
+            app:textColor="@color/black" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtbankifsclbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:minWidth="@dimen/minwidth"
+            android:padding="@dimen/normal_margin"
+            android:text="@string/bankifsc"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtbranchnamelbl" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtbankifsctxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:padding="@dimen/normal_margin"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintLeft_toRightOf="@+id/txtbankifsclbl"
+            app:layout_constraintTop_toBottomOf="@+id/sspbranch" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtbankaccnolbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:minWidth="@dimen/minwidth"
+            android:padding="@dimen/normal_margin"
+            android:text="@string/bankaccno"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtbankifsclbl" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtbankaccnotxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:hint="@string/enterbankaccointno"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:maxLength="50"
+            app:layout_constraintLeft_toRightOf="@+id/txtbankaccnolbl"
+            app:layout_constraintTop_toBottomOf="@+id/txtbankifsctxt"
+            app:textColor="@color/black" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clphoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/control_margin"
+        android:background="@color/bggrey"
+        android:paddingTop="@dimen/normal_margin"
+        android:paddingBottom="@dimen/normal_margin"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clfarmer">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtpassbookphotolbl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:text="@string/passbookphoto"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgtakephoto"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:minWidth="80dp"
+            android:src="@drawable/ic_menu_camera"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtpassbookphotolbl" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtphotopath"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgtakenphoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:maxHeight="110dp"
+            android:minWidth="80dp"
+            android:minHeight="110dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llbtns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/control_margin"
+        android:background="@color/bggrey"
+        android:orientation="horizontal"
+        android:padding="@dimen/normal_margin"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clphoto">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnprev"
+            style="@style/App_ButtonRedStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:layout_weight="1"
+            android:text="@string/prev"
+            android:textSize="@dimen/normaltext"
+            android:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnupdate"
+            style="@style/App_ButtonGreenStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:layout_weight="1"
+            android:text="@string/update"
+            android:textSize="@dimen/normaltext"
+            android:visibility="visible" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

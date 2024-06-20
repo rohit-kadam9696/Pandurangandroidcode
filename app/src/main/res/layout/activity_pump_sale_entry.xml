@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PumpSaleEntryActivity">
+
+    <include
+        android:id="@+id/iclocation"
+        layout="@layout/common_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtpumpname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pump"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iclocation" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtpumpid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iclocation" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtbilldate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/min_margin"
+        android:gravity="center_horizontal"
+        android:text="@string/billdate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtpumpname"
+        app:layout_constraintWidth_percent="0.45" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtshift"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/min_margin"
+        android:gravity="center_horizontal"
+        android:text="@string/shift"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtpumpname"
+        app:layout_constraintWidth_percent="0.45" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtbilldate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/normal_margin"
+        android:gravity="center_horizontal"
+        android:inputType="date"
+        android:focusableInTouchMode="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtbilldate"
+        app:layout_constraintWidth_percent="0.45" />
+
+    <com.twd.multispinnerfilter.SingleSpinnerSearch
+        android:id="@+id/sspshift"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_margin="@dimen/normal_margin"
+        android:background="@drawable/spinnerstyle"
+        android:gravity="center_horizontal"
+        android:text="@string/shift"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtshift"
+        app:layout_constraintWidth_percent="0.45" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtsaletype"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/min_margin"
+        android:gravity="center_horizontal"
+        android:text="@string/salestype"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtbilldate"
+        app:layout_constraintWidth_percent="0.45" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtcustomertype"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/min_margin"
+        android:gravity="center_horizontal"
+        android:text="@string/customertype"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sspshift"
+        app:layout_constraintWidth_percent="0.45" />
+
+    <com.twd.multispinnerfilter.SingleSpinnerSearch
+        android:id="@+id/sspsaletypes"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_margin="@dimen/normal_margin"
+        android:background="@drawable/spinnerstyle"
+        android:gravity="center_horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtcustomertype"
+        app:layout_constraintWidth_percent="0.45" />
+
+    <com.twd.multispinnerfilter.SingleSpinnerSearch
+        android:id="@+id/sspcustomertype"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_margin="@dimen/normal_margin"
+        android:background="@drawable/spinnerstyle"
+        android:gravity="center_horizontal"
+        android:text="@string/shift"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtcustomertype"
+        app:layout_constraintWidth_percent="0.45" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtcustomercode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/min_margin"
+        android:minWidth="@dimen/minwidth"
+        android:text="@string/customercode"
+        app:layout_constraintBottom_toBottomOf="@id/edtcustomercode"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sspsaletypes"
+        app:layout_constraintTop_toTopOf="@id/edtcustomercode"
+        app:layout_constraintWidth_percent="0.33" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtcustomercode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/normal_margin"
+        android:inputType="text"
+        app:layout_constraintStart_toEndOf="@id/txtcustomercode"
+        app:layout_constraintTop_toBottomOf="@+id/sspcustomertype"
+        app:layout_constraintWidth_percent="0.33" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtcustomercodeval"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/normal_margin"
+        android:gravity="center_horizontal"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@id/txtcustomercode"
+        app:layout_constraintTop_toBottomOf="@+id/sspcustomertype"
+        app:layout_constraintWidth_percent="0.33" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnsearchcode"
+        style="@style/App_ButtonBlueStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/control_margin"
+        android:text="@string/search"
+        app:layout_constraintBottom_toBottomOf="@id/edtcustomercode"
+        app:layout_constraintStart_toEndOf="@id/edtcustomercode"
+        app:layout_constraintTop_toBottomOf="@+id/sspsaletypes"
+        app:layout_constraintTop_toTopOf="@id/edtcustomercode"
+        app:layout_constraintWidth_percent="0.30" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtcustomername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnsearchcode" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtvehicleno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="@dimen/minwidth"
+        android:text="@string/vehicleno"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtcustomername" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtvehiclenoval"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/min_margin"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/txtvehicleno"
+        app:layout_constraintTop_toBottomOf="@+id/txtcustomername" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtproduct"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/min_margin"
+        android:text="@string/product"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtvehiclenoval"
+        app:layout_constraintWidth_percent="0.24" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtproductid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/min_margin"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@id/txtproduct"
+        app:layout_constraintTop_toBottomOf="@+id/txtvehiclenoval" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtproductval"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/min_margin"
+        app:layout_constraintStart_toEndOf="@id/txtproduct"
+        app:layout_constraintTop_toBottomOf="@+id/txtvehiclenoval"
+        app:layout_constraintWidth_percent="0.24" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtunit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/min_margin"
+        android:text="@string/unit"
+        app:layout_constraintStart_toEndOf="@id/txtproductval"
+        app:layout_constraintTop_toBottomOf="@+id/txtvehiclenoval"
+        app:layout_constraintWidth_percent="0.24" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtunitid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/min_margin"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@id/txtunit"
+        app:layout_constraintTop_toBottomOf="@+id/txtvehiclenoval" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtunitval"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/min_margin"
+        app:layout_constraintStart_toEndOf="@id/txtunit"
+        app:layout_constraintTop_toBottomOf="@+id/txtvehiclenoval"
+        app:layout_constraintWidth_percent="0.24" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtqty"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/min_margin"
+        android:text="@string/ltr"
+        app:layout_constraintBottom_toBottomOf="@id/edtqty"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/edtqty"
+        app:layout_constraintWidth_percent="0.24" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtqty"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/min_margin"
+        app:layout_constraintStart_toEndOf="@id/txtqty"
+        app:layout_constraintTop_toBottomOf="@+id/txtunitval"
+        app:layout_constraintWidth_percent="0.24" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtrate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/min_margin"
+        android:text="@string/rate"
+        app:layout_constraintBottom_toBottomOf="@id/edtqty"
+        app:layout_constraintStart_toEndOf="@id/edtqty"
+        app:layout_constraintTop_toTopOf="@id/edtqty"
+        app:layout_constraintWidth_percent="0.24" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtrateval"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/min_margin"
+        app:layout_constraintBottom_toBottomOf="@id/edtqty"
+        app:layout_constraintStart_toEndOf="@id/txtrate"
+        app:layout_constraintTop_toTopOf="@id/edtqty"
+        app:layout_constraintWidth_percent="0.24" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txttotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="@dimen/minwidth"
+        android:text="@string/amount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtqty" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txttotalval"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/min_margin"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/txtvehicleno"
+        app:layout_constraintTop_toBottomOf="@+id/edtqty" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnscanslip"
+        style="@style/App_ButtonBlueStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/control_margin"
+        android:text="@string/scanslip"
+        app:layout_constraintBottom_toTopOf="@+id/btntakephoto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.45" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnentercode"
+        style="@style/App_ButtonBlueStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/control_margin"
+        android:text="@string/entercode"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btntakephoto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.45" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btntakephoto"
+        style="@style/App_ButtonBlueStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/control_margin"
+        android:text="@string/takephoto"
+        app:layout_constraintBottom_toTopOf="@+id/btncancel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.45" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtphotopath"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/btnviewphoto"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnsubmit"
+        style="@style/App_ButtonGreenStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/control_margin"
+        android:text="@string/submit"
+        app:layout_constraintBottom_toTopOf="@+id/btnviewphoto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.45" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnviewphoto"
+        style="@style/App_ButtonBlueStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/control_margin"
+        android:text="@string/viewphoto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.45" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btncancel"
+        style="@style/App_ButtonRedStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/control_margin"
+        android:text="@string/back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.45" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_SCAN"
+        android:usesPermissionFlags="neverForLocation"
+        tools:targetApi="s" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <queries>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+    </queries>
+
+    <application
+        android:name=".inilizer.NetworkMonitoringApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ChitboyAppSPSSKL"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="m">
+        <activity
+            android:name=".PumpSaleEntryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PumpRateEntryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PumpPumpAssignActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SugarWithdrawActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PlantAreaCalcuationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NumInwardSummaryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserRoleChangeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NumTokenPassReprintActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NumIndWaitReportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NumYardBalanceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NumVehicleRegistrationReportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NumLotPrintNumActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NumStopStartNumActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NumIndExcludeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NumLotGenerationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ImageViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NumNumberActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NumYardAssignActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VillageAssignActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FertDistPrintActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FertMainDistActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".HarvFarmerTonnageDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HarvFarmerTonnageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HarvReportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FertPlantationDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WrongTimeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FertDistHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SugarInwardDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SugarDailyOutwardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SugarReceiptReprintActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SugarSaleSummaryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SugarSaleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SugarInwardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PDFSettingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RawanaReportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GutKhadeListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CaneTransitActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GutKhadeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AgriReportActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".CrushingReportActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".CompletePlotActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ViewExessPlotRequestActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ExtraPlotRequestListActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".CaneInwardDailyActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ExtraPlotRequestActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ExtraStatusRequestActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".OtherUtilizationActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".RemainingSlipActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".SlipNoActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".PrintSlipActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".HarvTransInfoActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".PrintTestActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".HarvPlotDetailsActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".HarvProgramStartActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".printer.DeviceListActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".HarvPlanIndviualActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".HarvPlanActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".CaneSampleInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CaneSampleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PlotSelectionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NondReportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FarmerBankinfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FarmerAdharcardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FarmerMobilenoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FarmerBirthdayActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FarmerInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NondConfirmActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NondConfirmListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NondConfirmjaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FarmerRequestListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FarmerDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OnlineFarmerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ViewDataActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SuccessActivity"
+            android:exported="false" />
+        <!--
+             TODO: Before you run your application, you need a Google Maps API key.
+
+             To get one, follow the directions here:
+
+                https://developers.google.com/maps/documentation/android-sdk/get-api-key
+
+             Once you have your API key (it starts with "AIza"), define a new property in your
+             project's local.properties file (e.g. MAPS_API_KEY=Aiza...), and replace the
+             "YOUR_API_KEY" string in this file with "${MAPS_API_KEY}".
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".LaganNondActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="portrait"
+            tools:replace="screenOrientation" />
+        <activity
+            android:name=".SelectFarmerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ChitboyAppSPSSKL.NoActionBar" />
+        <activity
+            android:name=".ChangePinActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ForgotPinActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginPinActivity"
+            android:exported="false" />
+        <activity
+            android:name=".IPSettingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AuthanticateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OTP_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".PdfViewerExampleActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".PdfCreatorExampleActivity"
+            android:configChanges="orientation|screenSize" />
+
+        <receiver
+            android:name=".receive.SMSReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_list" />
+        </provider>
+    </application>
+
+</manifest>

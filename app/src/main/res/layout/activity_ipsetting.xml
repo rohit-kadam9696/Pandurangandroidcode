@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="IPSettingActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="IPSettingActivity">
+
+        <RadioGroup
+            android:id="@+id/rgserversetting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rbserver1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/control_margin"
+                android:padding="@dimen/control_margin"
+                android:text="@string/server1" />
+
+
+            <RadioButton
+                android:id="@+id/rbserver2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/control_margin"
+                android:padding="@dimen/control_margin"
+                android:text="@string/server2" />
+
+            <RadioButton
+                android:id="@+id/rbtestserver1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/control_margin"
+                android:padding="@dimen/control_margin"
+                android:text="@string/testserver1" />
+
+
+            <RadioButton
+                android:id="@+id/rbtestserver2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/control_margin"
+                android:padding="@dimen/control_margin"
+                android:text="@string/testserver2" />
+
+            <RadioButton
+                android:id="@+id/rblocalserver1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/control_margin"
+                android:padding="@dimen/control_margin"
+                android:text="@string/localserver1" />
+
+
+            <RadioButton
+                android:id="@+id/rblocalserver2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/control_margin"
+                android:padding="@dimen/control_margin"
+                android:text="@string/localserver2" />
+
+            <RadioButton
+                android:id="@+id/rblocaltestserver1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/control_margin"
+                android:padding="@dimen/control_margin"
+                android:text="@string/localtestserver1" />
+
+
+            <RadioButton
+                android:id="@+id/rblocaltestserver2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/control_margin"
+                android:padding="@dimen/control_margin"
+                android:text="@string/localtestserver2" />
+
+
+        </RadioGroup>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/myprinter"
+            style="@style/App_ButtonGreenStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:text="@string/connectprinter" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clrptinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/normal_margin"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clrptfilter">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txttonhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tonnageinformation"
+            android:textSize="@dimen/textsizehead"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/lltonhead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txttonhead">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:layout_weight="3.5"
+                android:text="@string/vehicaltype"
+                android:textColor="@color/white"
+                android:textSize="@dimen/normaltext"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:layout_weight="2.5"
+                android:text="@string/count"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/normaltext"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:layout_weight="3.5"
+                android:text="@string/tonnage"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/normaltext"
+                android:textStyle="bold" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/lltruck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/min_margin"
+            android:layout_marginBottom="@dimen/min_margin"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lltonhead">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/normal_margin"
+                android:layout_weight="3.5"
+                android:gravity="center_vertical"
+                android:text="@string/truck"
+                android:textSize="@dimen/normaltext" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txttruckcount"
+                style="@style/App_EditTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_weight="2.5"
+                android:text="@string/defaultcount"
+                android:textAlignment="textEnd" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txttrucktonnage"
+                style="@style/App_EditTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_weight="3.5"
+                android:text="@string/defaultton"
+                android:textAlignment="textEnd" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/lltractor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/min_margin"
+            android:layout_marginBottom="@dimen/min_margin"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lltruck">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/normal_margin"
+                android:layout_weight="3.5"
+                android:gravity="center_vertical"
+                android:text="@string/tractor"
+                android:textSize="@dimen/normaltext" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txttractorcount"
+                style="@style/App_EditTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_weight="2.5"
+                android:text="@string/defaultcount"
+                android:textAlignment="textEnd" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txttractortonnage"
+                style="@style/App_EditTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_weight="3.5"
+                android:text="@string/defaultton"
+                android:textAlignment="textEnd" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llbullockcart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/min_margin"
+            android:layout_marginBottom="@dimen/min_margin"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lltractor">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/normal_margin"
+                android:layout_weight="3.5"
+                android:gravity="center_vertical"
+                android:text="@string/bullockcart"
+                android:textSize="@dimen/normaltext" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtbullockcartcount"
+                style="@style/App_EditTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_weight="2.5"
+                android:text="@string/defaultcount"
+                android:textAlignment="textEnd" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtbullockcarttonnage"
+                style="@style/App_EditTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_weight="3.5"
+                android:text="@string/defaultton"
+                android:textAlignment="textEnd" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/lltractorgadi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/min_margin"
+            android:layout_marginBottom="@dimen/min_margin"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llbullockcart">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/normal_margin"
+                android:layout_weight="3.5"
+                android:gravity="center_vertical"
+                android:text="@string/tractorgadi"
+                android:textSize="@dimen/normaltext" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txttractorgadicount"
+                style="@style/App_EditTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_weight="2.5"
+                android:text="@string/defaultcount"
+                android:textAlignment="textEnd" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txttractorgaditonnage"
+                style="@style/App_EditTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_weight="3.5"
+                android:text="@string/defaultton"
+                android:textAlignment="textEnd" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View
+            android:id="@+id/vwlinebreak"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/min_margin"
+            android:layout_marginBottom="@dimen/min_margin"
+            android:background="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lltractorgadi" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llttotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/min_margin"
+            android:layout_marginBottom="@dimen/min_margin"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vwlinebreak">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/normal_margin"
+                android:layout_weight="3.5"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/normaltext" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txttotal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_weight="2.5"
+                android:text="@string/total"
+                android:textSize="@dimen/xxnormaltext" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txttotaltonnage"
+                style="@style/App_EditTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_weight="3.5"
+                android:text="@string/defaultton"
+                android:textAlignment="textEnd" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

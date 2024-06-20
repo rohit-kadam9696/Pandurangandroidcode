@@ -1,0 +1,92 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.ChitboyAppSPSSKL" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVarient</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/colorPrimaryVarient</item>
+        <item name="colorSecondaryVariant">@color/colorSecondaryVarient</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/action_bar_color</item>
+        <!-- Customize your theme here. -->
+        <item name="editTextStyle">@style/App_EditTextStyle</item>
+        <item name="android:textViewStyle">@style/MyTextViewStyle</item>
+        <item name="radioButtonStyle">@style/radioButtonStyle</item>
+        <item name="android:actionBarStyle">@style/Custom.ActionBar</item>
+    </style>
+
+    <style name="Custom.ActionBar" parent="Widget.MaterialComponents.Light.ActionBar.Solid">
+        <item name="background">@color/action_bar_color</item>
+    </style>
+
+    <style name="MyTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/textviewtextcolor</item>
+        <item name="android:textSize">@dimen/textboxsize</item>
+    </style>
+
+    <style name="App_ButtonGreenStyle" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/selector_green_button_style</item>
+        <item name="android:textColor">@color/appbuttontextcolor</item>
+        <item name="android:padding">@dimen/btnpaddingstyle</item>
+        <item name="android:textSize">@dimen/btnsize</item>
+    </style>
+
+    <style name="App_ButtonRedStyle" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/selector_red_button_style</item>
+        <item name="android:textColor">@color/appbuttontextcolor</item>
+        <item name="android:padding">@dimen/btnpaddingstyle</item>
+        <item name="android:textSize">@dimen/btnsize</item>
+    </style>
+
+    <style name="App_ButtonBlueStyle" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/selector_blue_button_style</item>
+        <item name="android:textColor">@color/appbuttontextcolor</item>
+        <item name="android:padding">@dimen/btnpaddingstyle</item>
+        <item name="android:textSize">@dimen/btnsize</item>
+    </style>
+
+    <style name="App_EditTextStyle" parent="@android:style/Widget.EditText">
+        <item name="android:background">@drawable/edittextstyle</item>
+        <item name="android:padding">@dimen/edittextpaddingstyle</item>
+        <item name="android:textColor">@color/edittexttextcolorstyle</item>
+        <item name="android:textColorHint">@color/edittexttextcolorstylehint</item>
+        <!--<item name="android:textCursorDrawable">@null</item>-->
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="CustomAlertDialogStyle">
+        <item name="android:bottomBright">@android:color/transparent</item>
+        <item name="android:bottomDark">@android:color/transparent</item>
+        <item name="android:bottomMedium">@android:color/transparent</item>
+        <item name="android:centerBright">@android:color/transparent</item>
+        <item name="android:centerDark">@android:color/transparent</item>
+        <item name="android:centerMedium">@android:color/transparent</item>
+        <item name="android:fullBright">@drawable/toastback</item>
+        <item name="android:fullDark">@drawable/toastback</item>
+        <item name="android:topBright">@android:color/transparent</item>
+        <item name="android:topDark">@android:color/transparent</item>
+    </style>
+
+    <style name="radioButtonStyle" parent="android:Widget.Holo.CompoundButton.RadioButton">
+        <item name="android:textColor">@color/radiocolor</item>
+        <item name="android:textSize">@dimen/textboxsize</item>
+        <item name="android:background">@color/radiobackground</item>
+    </style>
+
+    <style name="Theme.ChitboyAppSPSSKL.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.ChitboyAppSPSSKL.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.ChitboyAppSPSSKL.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="NavDrawerTextStyle" parent="Base.TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/normaltext</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

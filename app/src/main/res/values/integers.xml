@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="SPLASH_TIME_OUT">3000</integer>
+    <integer name="countdowntime">120000</integer>
+    <integer name="countdowntimeinterval">1000</integer>
+</resources>

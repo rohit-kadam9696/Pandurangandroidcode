@@ -1,0 +1,336 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ncregistrationcard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:layout_marginStart="19dp"
+    android:layout_marginEnd="19dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:minHeight="120dp"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="20dp">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtnondvilagelbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:minWidth="@dimen/minwidth2"
+                android:paddingTop="@dimen/normal_margin"
+                android:paddingBottom="@dimen/normal_margin"
+                android:text="@string/nondvillage"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtnccollon1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:paddingTop="@dimen/normal_margin"
+                android:paddingBottom="@dimen/normal_margin"
+                android:text="@string/colon"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintLeft_toRightOf="@+id/txtnondvilagelbl"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtnondvillagetxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:paddingTop="@dimen/normal_margin"
+                android:paddingBottom="@dimen/normal_margin"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintLeft_toRightOf="@+id/txtnccollon1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtplotno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:minWidth="@dimen/minwidthmin"
+                android:paddingTop="@dimen/normal_margin"
+                android:paddingBottom="@dimen/normal_margin"
+                android:text="@string/plotno"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtnondvilagelbl" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtnccollon2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:paddingTop="@dimen/normal_margin"
+                android:paddingBottom="@dimen/normal_margin"
+                android:text="@string/colon"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintLeft_toRightOf="@+id/txtplotno"
+                app:layout_constraintTop_toBottomOf="@+id/txtnccollon1" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtplotnotxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:paddingTop="@dimen/normal_margin"
+                android:minWidth="@dimen/minwidthmin"
+                android:paddingBottom="@dimen/normal_margin"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintLeft_toRightOf="@+id/txtnccollon2"
+                app:layout_constraintTop_toBottomOf="@+id/txtnondvillagetxt" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txthangamlbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:minWidth="@dimen/minwidthmin"
+                android:paddingTop="@dimen/normal_margin"
+                android:paddingBottom="@dimen/normal_margin"
+                android:text="@string/hangam"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintLeft_toRightOf="@id/txtplotnotxt"
+                app:layout_constraintTop_toBottomOf="@+id/txtnondvillagetxt" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtnccollon8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:paddingTop="@dimen/normal_margin"
+                android:paddingBottom="@dimen/normal_margin"
+                android:text="@string/colon"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintLeft_toRightOf="@+id/txthangamlbl"
+                app:layout_constraintTop_toBottomOf="@+id/txtnondvillagetxt" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txthangamtxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:paddingTop="@dimen/normal_margin"
+                android:paddingBottom="@dimen/normal_margin"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintLeft_toRightOf="@+id/txtnccollon8"
+                app:layout_constraintTop_toBottomOf="@+id/txtnondvillagetxt" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtarealbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:minWidth="@dimen/minwidthmin"
+                android:paddingTop="@dimen/normal_margin"
+                android:paddingBottom="@dimen/normal_margin"
+                android:text="@string/area"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtplotno" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtnccollon3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:paddingTop="@dimen/normal_margin"
+                android:paddingBottom="@dimen/normal_margin"
+                android:text="@string/colon"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintLeft_toRightOf="@+id/txtarealbl"
+                app:layout_constraintTop_toBottomOf="@+id/txtnccollon2" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtareatxt"
+                android:layout_width="wrap_content"
+                android:minWidth="@dimen/minwidthmin2"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:paddingTop="@dimen/normal_margin"
+                android:paddingBottom="@dimen/normal_margin"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintLeft_toRightOf="@+id/txtnccollon3"
+                app:layout_constraintTop_toBottomOf="@+id/txtplotnotxt"
+                app:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtvaritylbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:minWidth="@dimen/minwidthmin"
+                android:paddingTop="@dimen/normal_margin"
+                android:paddingBottom="@dimen/normal_margin"
+                android:text="@string/variety"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintLeft_toRightOf="@id/txtareatxt"
+                app:layout_constraintTop_toBottomOf="@+id/txthangamlbl" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtnccollon9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:paddingTop="@dimen/normal_margin"
+                android:paddingBottom="@dimen/normal_margin"
+                android:text="@string/colon"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintLeft_toRightOf="@+id/txtvaritylbl"
+                app:layout_constraintTop_toBottomOf="@+id/txthangamlbl" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtvaritytxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:paddingTop="@dimen/normal_margin"
+                android:paddingBottom="@dimen/normal_margin"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintLeft_toRightOf="@+id/txtnccollon9"
+                app:layout_constraintTop_toBottomOf="@+id/txthangamtxt" />
+
+            <androidx.constraintlayout.widget.Group
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="txtplantationdatelbl, txtnccollon4, txtplantationdatetxt"
+                android:id="@+id/survyhandler" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtexpectedyieldlbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:minWidth="@dimen/minwidth2"
+                android:paddingTop="@dimen/normal_margin"
+                android:paddingBottom="@dimen/normal_margin"
+                android:text="@string/expectedyield"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtarealbl" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtnccollon6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:paddingTop="@dimen/normal_margin"
+                android:paddingBottom="@dimen/normal_margin"
+                android:text="@string/colon"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintLeft_toRightOf="@+id/txtexpectedyieldlbl"
+                app:layout_constraintTop_toBottomOf="@+id/txtnccollon3" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtexpectedyieldtxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:paddingTop="@dimen/normal_margin"
+                android:paddingBottom="@dimen/normal_margin"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintLeft_toRightOf="@+id/txtnccollon6"
+                app:layout_constraintTop_toBottomOf="@+id/txtareatxt" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtplantationdatelbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:minWidth="@dimen/minwidth2"
+                android:paddingTop="@dimen/normal_margin"
+                android:paddingBottom="@dimen/normal_margin"
+                android:text="@string/plantationdate"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtexpectedyieldlbl" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtnccollon4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:paddingTop="@dimen/normal_margin"
+                android:paddingBottom="@dimen/normal_margin"
+                android:text="@string/colon"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintLeft_toRightOf="@+id/txtplantationdatelbl"
+                app:layout_constraintTop_toBottomOf="@+id/txtnccollon6" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtplantationdatetxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:paddingTop="@dimen/normal_margin"
+                android:paddingBottom="@dimen/normal_margin"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintLeft_toRightOf="@+id/txtnccollon4"
+                app:layout_constraintTop_toBottomOf="@+id/txtexpectedyieldtxt" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtstatuslbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:minWidth="@dimen/minwidth2"
+                android:paddingTop="@dimen/normal_margin"
+                android:paddingBottom="@dimen/normal_margin"
+                android:text="@string/status"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtplantationdatelbl" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtnccollon7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:paddingTop="@dimen/normal_margin"
+                android:paddingBottom="@dimen/normal_margin"
+                android:text="@string/colon"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintLeft_toRightOf="@+id/txtstatuslbl"
+                app:layout_constraintTop_toBottomOf="@+id/txtnccollon4" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtstatustxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:paddingTop="@dimen/normal_margin"
+                android:paddingBottom="@dimen/normal_margin"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintLeft_toRightOf="@+id/txtnccollon7"
+                app:layout_constraintTop_toBottomOf="@+id/txtplantationdatetxt" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.cardview.widget.CardView>

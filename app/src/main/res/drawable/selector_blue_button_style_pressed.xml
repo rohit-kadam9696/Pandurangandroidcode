@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/btnbluecolorpressed" />
+    <corners
+        android:bottomLeftRadius="@dimen/btncornorredius"
+        android:bottomRightRadius="@dimen/btncornorredius"
+        android:topLeftRadius="@dimen/btncornorredius"
+        android:topRightRadius="@dimen/btncornorredius" />
+    <stroke
+        android:width="@dimen/btnstrock"
+        android:color="@color/white" />
+    <size
+        android:width="@dimen/buttonsizewidth"
+        android:height="@dimen/buttonsizeheight" />
+</shape>

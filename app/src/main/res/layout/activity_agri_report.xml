@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AgriReportActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtreportdatelbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:minWidth="@dimen/minwidth"
+            android:padding="@dimen/normal_margin"
+            android:text="@string/datedinak"
+            android:textColor="@color/colorMgmtText"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtreportdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:focusableInTouchMode="false"
+            android:hint="@string/selectdate"
+            android:maxWidth="@dimen/width"
+            android:maxLength="10"
+            android:minWidth="@dimen/minwidth"
+            android:textColor="@color/colorMgmtText"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtreportdatelbl"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtnondsummarylbl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:minWidth="@dimen/minwidth"
+            android:text="@string/nondsummary"
+            android:textColor="@color/colorMgmtText"
+            android:textSize="@dimen/normaltext"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtreportdate" />
+
+        <HorizontalScrollView
+            android:id="@+id/hsvnondsummary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/control_margin"
+            android:layout_marginEnd="@dimen/control_margin"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtnondsummarylbl">
+
+            <TableLayout
+                android:id="@+id/tblnondsummary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </HorizontalScrollView>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtsectionnondtonlbl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:minWidth="@dimen/minwidth"
+            android:text="@string/sectionnondton"
+            android:textColor="@color/colorMgmtText"
+            android:textSize="@dimen/normaltext"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hsvnondsummary" />
+
+        <HorizontalScrollView
+            android:id="@+id/hsvsectionnondton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/control_margin"
+            android:layout_marginEnd="@dimen/control_margin"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtsectionnondtonlbl">
+
+            <TableLayout
+                android:id="@+id/tblsectionnondton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </HorizontalScrollView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtsectionhangamnondlbl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:minWidth="@dimen/minwidth"
+            android:text="@string/sectionnond"
+            android:textColor="@color/colorMgmtText"
+            android:textSize="@dimen/normaltext"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hsvsectionnondton" />
+
+        <HorizontalScrollView
+            android:id="@+id/hsvsectionhangamnond"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/control_margin"
+            android:layout_marginEnd="@dimen/control_margin"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtsectionhangamnondlbl">
+
+            <TableLayout
+                android:id="@+id/tblsectionhangamnond"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </HorizontalScrollView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtsectionvarietynondlbl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:minWidth="@dimen/minwidth"
+            android:text="@string/sectionvarietynond"
+            android:textColor="@color/colorMgmtText"
+            android:textSize="@dimen/normaltext"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hsvsectionhangamnond" />
+
+        <HorizontalScrollView
+            android:id="@+id/hsvsectionvarietynond"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/control_margin"
+            android:layout_marginEnd="@dimen/control_margin"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtsectionvarietynondlbl">
+
+            <TableLayout
+                android:id="@+id/tblsectionvarietynond"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </HorizontalScrollView>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txthangamvarietynondlbl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:minWidth="@dimen/minwidth"
+            android:text="@string/hangamvarietynond"
+            android:textColor="@color/colorMgmtText"
+            android:textSize="@dimen/normaltext"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hsvsectionvarietynond" />
+
+        <HorizontalScrollView
+            android:id="@+id/hsvhangamvarietynond"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/control_margin"
+            android:layout_marginEnd="@dimen/control_margin"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txthangamvarietynondlbl">
+
+            <TableLayout
+                android:id="@+id/tblhangamvarietynond"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </HorizontalScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

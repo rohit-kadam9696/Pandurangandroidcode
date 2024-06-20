@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/spinnerbgcolor" />
+            <!-- <gradient
+                 android:startColor = "@color/spinnerstart"
+                 android:endColor = "@color/spinnerend"
+                 android:angle = "-90"
+                 android:type ="linear" />-->
+
+            <corners android:radius="@dimen/spinnercornor" />
+
+            <stroke
+                android:width="0dp"
+                android:color="@color/spinnerstrokecolor" />
+        </shape>
+    </item>
+
+</layer-list>

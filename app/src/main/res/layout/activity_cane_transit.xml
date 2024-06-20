@@ -1,0 +1,782 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CaneTransitActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clstep1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clmain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:background="@color/bggrey"
+            android:paddingTop="@dimen/normal_margin"
+            android:paddingBottom="@dimen/normal_margin"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtdatelbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/control_margin"
+                android:gravity="center_vertical"
+                android:minWidth="@dimen/minwidth"
+                android:text="@string/datedinak"
+                android:textSize="@dimen/ssnormaltext"
+                app:layout_constraintBottom_toBottomOf="@+id/txtdateval"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/txtdateval" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtdateval"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:maxLength="10"
+                app:layout_constraintLeft_toRightOf="@+id/txtdatelbl"
+                app:layout_constraintTop_toTopOf="parent"
+                app:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txttransedit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="10"
+                android:text="0"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtvillagelbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:gravity="center_vertical"
+                android:minWidth="@dimen/minwidth"
+                android:padding="@dimen/normal_margin"
+                android:text="@string/village"
+                android:textSize="@dimen/ssnormaltext"
+                app:layout_constraintBottom_toBottomOf="@+id/sspvillage"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/sspvillage" />
+
+            <com.twd.multispinnerfilter.SingleSpinnerSearch
+                android:id="@+id/sspvillage"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="@dimen/normal_margin"
+                android:background="@drawable/spinnerstyle"
+                app:hintText="@string/select"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtvillagelbl"
+                app:layout_constraintTop_toBottomOf="@+id/txtdateval"
+                app:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtsparearea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:gravity="center_vertical"
+                android:minWidth="@dimen/minwidth"
+                android:padding="@dimen/normal_margin"
+                android:text="@string/remaingarea"
+                android:textSize="@dimen/ssnormaltext"
+                app:layout_constraintBottom_toBottomOf="@+id/edtsparearea"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/edtsparearea" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtsparearea"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="@dimen/normal_margin"
+                android:inputType="numberDecimal"
+                app:hintText="@string/select"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtsparearea"
+                app:layout_constraintTop_toBottomOf="@+id/sspvillage"
+                app:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtsparetonnage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:gravity="center_vertical"
+                android:minWidth="@dimen/minwidth"
+                android:padding="@dimen/normal_margin"
+                android:text="@string/remaingtonnage"
+                android:textSize="@dimen/ssnormaltext"
+                app:layout_constraintBottom_toBottomOf="@+id/edtsparetonnage"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/edtsparetonnage" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtsparetonnage"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="@dimen/normal_margin"
+                android:inputType="numberDecimal"
+                app:hintText="@string/select"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtsparetonnage"
+                app:layout_constraintTop_toBottomOf="@+id/edtsparearea"
+                app:textColor="@color/black" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/cldtls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:background="@color/bggrey"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/normal_margin"
+            android:paddingBottom="@dimen/normal_margin"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clmain">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_margin"
+                android:layout_marginBottom="@dimen/normal_margin"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/min_margin"
+                    android:layout_marginEnd="@dimen/min_margin"
+                    android:layout_weight="2"
+                    android:padding="@dimen/normal_margin"
+                    android:text="@string/yantrana"
+                    android:textSize="@dimen/ssnormaltext" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/min_margin"
+                    android:layout_marginEnd="@dimen/min_margin"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:padding="@dimen/normal_margin"
+                    android:text="@string/tolya"
+                    android:textSize="@dimen/ssnormaltext" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/min_margin"
+                    android:layout_marginEnd="@dimen/min_margin"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:padding="@dimen/normal_margin"
+                    android:text="@string/bajat"
+                    android:textSize="@dimen/ssnormaltext" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/min_margin"
+                    android:layout_marginEnd="@dimen/min_margin"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:padding="@dimen/normal_margin"
+                    android:text="@string/harvestorvehicle"
+                    android:textSize="@dimen/ssnormaltext" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/min_margin"
+                    android:layout_marginEnd="@dimen/min_margin"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:padding="@dimen/normal_margin"
+                    android:text="@string/bullockcart"
+                    android:textSize="@dimen/ssnormaltext" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_margin"
+                android:layout_marginBottom="@dimen/normal_margin"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/min_margin"
+                    android:layout_marginEnd="@dimen/min_margin"
+                    android:layout_weight="2"
+                    android:padding="@dimen/normal_margin"
+                    android:text="@string/local"
+                    android:textSize="@dimen/ssnormaltext" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtlocaltolya"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/min_margin"
+                    android:layout_marginEnd="@dimen/min_margin"
+                    android:layout_weight="2"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    app:textColor="@color/black" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtlocalbajat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/min_margin"
+                    android:layout_marginEnd="@dimen/min_margin"
+                    android:layout_weight="2"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    app:textColor="@color/black" />
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtlocalmachine"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/min_margin"
+                    android:layout_marginEnd="@dimen/min_margin"
+                    android:layout_weight="2"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    app:textColor="@color/black" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtlocalbulluckcart"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/min_margin"
+                    android:layout_marginEnd="@dimen/min_margin"
+                    android:layout_weight="2"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    app:textColor="@color/black" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_margin"
+                android:layout_marginBottom="@dimen/normal_margin"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/min_margin"
+                    android:layout_marginEnd="@dimen/min_margin"
+                    android:layout_weight="2"
+                    android:padding="@dimen/normal_margin"
+                    android:text="@string/outside"
+                    android:textSize="@dimen/ssnormaltext" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtoutsidetolya"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/min_margin"
+                    android:layout_marginEnd="@dimen/min_margin"
+                    android:layout_weight="2"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    app:textColor="@color/black" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtoutsidebajat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/min_margin"
+                    android:layout_marginEnd="@dimen/min_margin"
+                    android:layout_weight="2"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    app:textColor="@color/black" />
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtoutsidemachine"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/min_margin"
+                    android:layout_marginEnd="@dimen/min_margin"
+                    android:layout_weight="2"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    app:textColor="@color/black" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtoutsidebulluckcart"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/min_margin"
+                    android:layout_marginEnd="@dimen/min_margin"
+                    android:layout_weight="2"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    app:textColor="@color/black" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_margin"
+                android:layout_marginBottom="@dimen/normal_margin"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/min_margin"
+                    android:layout_marginEnd="@dimen/min_margin"
+                    android:layout_weight="2"
+                    android:padding="@dimen/normal_margin"
+                    android:text="@string/self"
+                    android:textSize="@dimen/ssnormaltext" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtselftolya"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/min_margin"
+                    android:layout_marginEnd="@dimen/min_margin"
+                    android:layout_weight="2"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    app:textColor="@color/black" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtselfbajat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/min_margin"
+                    android:layout_marginEnd="@dimen/min_margin"
+                    android:layout_weight="2"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    app:textColor="@color/black" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/min_margin"
+                    android:layout_marginEnd="@dimen/min_margin"
+                    android:layout_weight="2"
+                    android:padding="@dimen/normal_margin"
+                    android:textSize="@dimen/ssnormaltext" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/min_margin"
+                    android:layout_marginEnd="@dimen/min_margin"
+                    android:layout_weight="2"
+                    android:padding="@dimen/normal_margin"
+                    android:textSize="@dimen/ssnormaltext" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_margin"
+                android:layout_marginBottom="@dimen/normal_margin"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/min_margin"
+                    android:layout_marginEnd="@dimen/min_margin"
+                    android:layout_weight="2"
+                    android:padding="@dimen/normal_margin"
+                    android:text="@string/total"
+                    android:textSize="@dimen/ssnormaltext" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txttotaltolya"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/min_margin"
+                    android:layout_marginEnd="@dimen/min_margin"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:padding="@dimen/normal_margin"
+                    android:text="0"
+                    android:textSize="@dimen/ssnormaltext" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txttotalbajat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/min_margin"
+                    android:layout_marginEnd="@dimen/min_margin"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:padding="@dimen/normal_margin"
+                    android:text="0"
+                    android:textSize="@dimen/ssnormaltext" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txttotalmachine"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/min_margin"
+                    android:layout_marginEnd="@dimen/min_margin"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:padding="@dimen/normal_margin"
+                    android:text="0"
+                    android:textSize="@dimen/ssnormaltext" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txttotalbulluckcart"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/min_margin"
+                    android:layout_marginEnd="@dimen/min_margin"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:padding="@dimen/normal_margin"
+                    android:text="0"
+                    android:textSize="@dimen/ssnormaltext" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_margin"
+                android:layout_marginBottom="@dimen/normal_margin"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/min_margin"
+                    android:layout_marginEnd="@dimen/min_margin"
+                    android:layout_weight="2"
+                    android:padding="@dimen/normal_margin"
+                    android:text="@string/before4pm"
+                    android:textSize="@dimen/ssnormaltext" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtbefore4pmtolya"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/min_margin"
+                    android:layout_marginEnd="@dimen/min_margin"
+                    android:layout_weight="2"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    app:textColor="@color/black" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtbefore4pmbajat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/min_margin"
+                    android:layout_marginEnd="@dimen/min_margin"
+                    android:layout_weight="2"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    app:textColor="@color/black" />
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtbefore4pmmachine"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/min_margin"
+                    android:layout_marginEnd="@dimen/min_margin"
+                    android:layout_weight="2"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    app:textColor="@color/black" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/min_margin"
+                    android:layout_marginEnd="@dimen/min_margin"
+                    android:layout_weight="2"
+                    android:padding="@dimen/normal_margin"
+                    android:textSize="@dimen/ssnormaltext" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_margin"
+                android:layout_marginBottom="@dimen/normal_margin"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/min_margin"
+                    android:layout_marginEnd="@dimen/min_margin"
+                    android:layout_weight="2"
+                    android:padding="@dimen/normal_margin"
+                    android:text="@string/after4pm"
+                    android:textSize="@dimen/ssnormaltext" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtafter4pmtolya"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/min_margin"
+                    android:layout_marginEnd="@dimen/min_margin"
+                    android:layout_weight="2"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    app:textColor="@color/black" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtafter4pmbajat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/min_margin"
+                    android:layout_marginEnd="@dimen/min_margin"
+                    android:layout_weight="2"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    app:textColor="@color/black" />
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtafter4pmmachine"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/min_margin"
+                    android:layout_marginEnd="@dimen/min_margin"
+                    android:layout_weight="2"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    app:textColor="@color/black" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/min_margin"
+                    android:layout_marginEnd="@dimen/min_margin"
+                    android:layout_weight="2"
+                    android:padding="@dimen/normal_margin"
+                    android:textSize="@dimen/ssnormaltext" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_margin"
+                android:layout_marginBottom="@dimen/normal_margin"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/min_margin"
+                    android:layout_marginEnd="@dimen/min_margin"
+                    android:layout_weight="2"
+                    android:padding="@dimen/normal_margin"
+                    android:text="@string/closevehicle"
+                    android:textSize="@dimen/ssnormaltext" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtclosetolya"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/min_margin"
+                    android:layout_marginEnd="@dimen/min_margin"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:padding="@dimen/normal_margin"
+                    android:text="0"
+                    android:textSize="@dimen/ssnormaltext" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtclosebajat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/min_margin"
+                    android:layout_marginEnd="@dimen/min_margin"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:padding="@dimen/normal_margin"
+                    android:text="0"
+                    android:textSize="@dimen/ssnormaltext" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/min_margin"
+                    android:layout_marginEnd="@dimen/min_margin"
+                    android:layout_weight="2"
+                    android:padding="@dimen/normal_margin"
+                    android:textSize="@dimen/ssnormaltext" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/min_margin"
+                    android:layout_marginEnd="@dimen/min_margin"
+                    android:layout_weight="2"
+                    android:padding="@dimen/normal_margin"
+                    android:textSize="@dimen/ssnormaltext" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_margin"
+                android:layout_marginBottom="@dimen/normal_margin"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/min_margin"
+                    android:layout_marginEnd="@dimen/min_margin"
+                    android:layout_weight="2"
+                    android:padding="@dimen/normal_margin"
+                    android:text="@string/extratrip"
+                    android:textSize="@dimen/ssnormaltext" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtextratriptoli"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/min_margin"
+                    android:layout_marginEnd="@dimen/min_margin"
+                    android:layout_weight="2"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    app:textColor="@color/black" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtextratripbajat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/min_margin"
+                    android:layout_marginEnd="@dimen/min_margin"
+                    android:layout_weight="2"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    app:textColor="@color/black" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/min_margin"
+                    android:layout_marginEnd="@dimen/min_margin"
+                    android:layout_weight="2"
+                    android:padding="@dimen/normal_margin"
+                    android:textSize="@dimen/ssnormaltext" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/min_margin"
+                    android:layout_marginEnd="@dimen/min_margin"
+                    android:layout_weight="2"
+                    android:padding="@dimen/normal_margin"
+                    android:textSize="@dimen/ssnormaltext" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llbtns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:background="@color/bggrey"
+            android:orientation="horizontal"
+            android:padding="@dimen/normal_margin"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cldtls">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnprev"
+                style="@style/App_ButtonRedStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:layout_weight="2"
+                android:text="@string/prev"
+                android:textSize="@dimen/normaltext"
+                android:visibility="visible" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnsubmit"
+                style="@style/App_ButtonGreenStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:layout_weight="2"
+                android:text="@string/submit"
+                android:textSize="@dimen/normaltext"
+                android:visibility="visible" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

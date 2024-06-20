@@ -1,0 +1,308 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ncregistrationcard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:layout_marginStart="19dp"
+    android:layout_marginEnd="19dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:minHeight="120dp"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="20dp">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtseasonlbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:minWidth="@dimen/minwidthmin"
+                android:text="@string/season"
+                app:layout_constraintBottom_toBottomOf="@id/txtseasonval"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@id/txtseasonval" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtnccollon1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:text="@string/colon"
+                app:layout_constraintBottom_toBottomOf="@id/txtseasonval"
+                app:layout_constraintLeft_toRightOf="@+id/txtseasonlbl"
+                app:layout_constraintTop_toTopOf="@id/txtseasonval" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtseasonval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtnccollon1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtvehicletypeval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:visibility="gone"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtnccollon1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txttranscodeval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:visibility="gone"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtnccollon1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtvillageval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:visibility="gone"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtnccollon1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtvillagenameval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:visibility="gone"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtnccollon1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtvehiclegroupidval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:visibility="gone"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtnccollon1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtslipnolbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:minWidth="@dimen/minwidthmin"
+                android:text="@string/slipno"
+                app:layout_constraintBottom_toBottomOf="@id/txtslipnoval"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@id/txtslipnoval" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtnccollon2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:text="@string/colon"
+                app:layout_constraintBottom_toBottomOf="@id/txtslipnoval"
+                app:layout_constraintLeft_toRightOf="@+id/txtslipnolbl"
+                app:layout_constraintTop_toTopOf="@id/txtslipnoval" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtslipnoval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtnccollon2"
+                app:layout_constraintTop_toBottomOf="@+id/txtseasonval" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtfarmerlbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:minWidth="@dimen/minwidthmin"
+                android:text="@string/farmer"
+                app:layout_constraintBottom_toBottomOf="@id/txtfarmerval"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@id/txtfarmerval" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtnccollon3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:text="@string/colon"
+                app:layout_constraintBottom_toBottomOf="@id/txtfarmerval"
+                app:layout_constraintLeft_toRightOf="@+id/txtfarmerlbl"
+                app:layout_constraintTop_toTopOf="@id/txtfarmerval" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtfarmerval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtnccollon3"
+                app:layout_constraintTop_toBottomOf="@+id/txtslipnoval"
+                app:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txttransporterlbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:minWidth="@dimen/minwidthmin"
+                android:text="@string/transporter"
+                app:layout_constraintBottom_toBottomOf="@id/txttransporterval"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@id/txttransporterval" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtnccollon7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:text="@string/colon"
+                app:layout_constraintBottom_toBottomOf="@id/txttransporterval"
+                app:layout_constraintLeft_toRightOf="@+id/txttransporterlbl"
+                app:layout_constraintTop_toTopOf="@id/txttransporterval" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txttransporterval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtnccollon7"
+                app:layout_constraintTop_toBottomOf="@+id/txtfarmerval" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtvehiclenolbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:minWidth="@dimen/minwidthmin"
+                android:text="@string/vehicalno"
+                app:layout_constraintBottom_toBottomOf="@id/txtvehiclenoval"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@id/txtvehiclenoval" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtnccollon4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:text="@string/colon"
+                app:layout_constraintBottom_toBottomOf="@id/txtvehiclenoval"
+                app:layout_constraintLeft_toRightOf="@+id/txtvehiclenolbl"
+                app:layout_constraintTop_toTopOf="@id/txtvehiclenoval" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtvehiclenoval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtnccollon4"
+                app:layout_constraintTop_toBottomOf="@+id/txttransporterval" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtfronttailerlbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:minWidth="@dimen/minwidthmin"
+                android:text="@string/fronttrailer"
+                app:layout_constraintBottom_toBottomOf="@id/txtfronttailerval"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@id/txtfronttailerval" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtnccollon5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:text="@string/colon"
+                app:layout_constraintBottom_toBottomOf="@id/txtfronttailerval"
+                app:layout_constraintLeft_toRightOf="@+id/txtfronttailerlbl"
+                app:layout_constraintTop_toTopOf="@id/txtfronttailerval" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtfronttailerval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtnccollon5"
+                app:layout_constraintTop_toBottomOf="@+id/txtvehiclenoval" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtbacktailerlbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:minWidth="@dimen/minwidthmin"
+                android:text="@string/backtrailer"
+                app:layout_constraintBottom_toBottomOf="@id/txtbacktailerval"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@id/txtbacktailerval" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtnccollon6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:text="@string/colon"
+                app:layout_constraintBottom_toBottomOf="@id/txtbacktailerval"
+                app:layout_constraintLeft_toRightOf="@+id/txtbacktailerlbl"
+                app:layout_constraintTop_toTopOf="@id/txtbacktailerval" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtbacktailerval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtnccollon6"
+                app:layout_constraintTop_toBottomOf="@+id/txtfronttailerval" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.cardview.widget.CardView>

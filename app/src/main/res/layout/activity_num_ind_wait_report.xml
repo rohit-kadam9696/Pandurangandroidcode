@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NumIndWaitReportActivity">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnscanslip"
+        style="@style/App_ButtonBlueStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/control_margin"
+        android:text="@string/scanslip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.45" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnentercode"
+        style="@style/App_ButtonBlueStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/control_margin"
+        android:text="@string/entercode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.45" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clmain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/control_margin"
+        android:background="@color/bggrey"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnentercode">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txttransid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/txtnameval"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txtnameval" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtslipno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtnamelbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:minWidth="@dimen/minwidthmin3"
+            android:text="@string/name"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintBottom_toBottomOf="@id/txtnameval"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txtnameval" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtnclcollon1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:text="@string/colon"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintBottom_toBottomOf="@id/txtnameval"
+            app:layout_constraintStart_toEndOf="@+id/txtnamelbl"
+            app:layout_constraintTop_toTopOf="@id/txtnameval" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtnameval"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:textSize="@dimen/normaltext"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtnclcollon1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtvehiclenolbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:minWidth="@dimen/minwidthmin3"
+            android:text="@string/vehicalno"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintBottom_toBottomOf="@id/txtvehiclenoval"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txtvehiclenoval" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtnclcollon5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:text="@string/colon"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintBottom_toBottomOf="@id/txtvehiclenoval"
+            app:layout_constraintStart_toEndOf="@+id/txtdatetimelbl"
+            app:layout_constraintTop_toTopOf="@id/txtvehiclenoval" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtvehiclenoval"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:textSize="@dimen/normaltext"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtnclcollon5"
+            app:layout_constraintTop_toBottomOf="@id/txtnameval" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtdatetimelbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:minWidth="@dimen/minwidthmin3"
+            android:text="@string/datedinak"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintBottom_toBottomOf="@id/txtdatetimeval"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txtdatetimeval" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtnclcollon2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:text="@string/colon"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintBottom_toBottomOf="@id/txtdatetimeval"
+            app:layout_constraintStart_toEndOf="@+id/txtdatetimelbl"
+            app:layout_constraintTop_toTopOf="@id/txtdatetimeval" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtdatetimeval"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:textSize="@dimen/normaltext"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtnclcollon2"
+            app:layout_constraintTop_toBottomOf="@id/txtvehiclenoval" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtyardnamelbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:minWidth="@dimen/minwidthmin3"
+            android:text="@string/yard"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintBottom_toBottomOf="@id/txtyardval"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txtyardval" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtnclcollon4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:text="@string/colon"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintBottom_toBottomOf="@id/txtyardval"
+            app:layout_constraintStart_toEndOf="@+id/txtyardnamelbl"
+            app:layout_constraintTop_toTopOf="@id/txtyardval" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtyardval"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:textSize="@dimen/normaltext"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtnclcollon4"
+            app:layout_constraintTop_toBottomOf="@id/txtdatetimeval" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txttokennolbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:minWidth="@dimen/minwidthmin3"
+            android:text="@string/token"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintBottom_toBottomOf="@id/txttokennoval"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txttokennoval" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtnclcollon3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:text="@string/colon"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintBottom_toBottomOf="@id/txttokennoval"
+            app:layout_constraintStart_toEndOf="@+id/txttokennolbl"
+            app:layout_constraintTop_toTopOf="@id/txttokennoval" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txttokennoval"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:textSize="@dimen/normaltext"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtnclcollon3"
+            app:layout_constraintTop_toBottomOf="@id/txtyardval" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txttotalwaitinglbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:minWidth="@dimen/minwidthmin3"
+            android:text="@string/totalwaiting"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintBottom_toBottomOf="@id/txttotalwaitingval"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txttotalwaitingval" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtnclcollon8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:text="@string/colon"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintBottom_toBottomOf="@id/txttotalwaitingval"
+            app:layout_constraintStart_toEndOf="@+id/txttotalwaitinglbl"
+            app:layout_constraintTop_toTopOf="@id/txttotalwaitingval" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txttotalwaitingval"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:textSize="@dimen/normaltext"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtnclcollon8"
+            app:layout_constraintTop_toBottomOf="@id/txttokennoval" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtphotopathval"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:textSize="@dimen/normaltext"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtnclcollon8"
+            app:layout_constraintTop_toBottomOf="@id/txttokennoval" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtreasonlbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:minWidth="@dimen/minwidthmin3"
+            android:text="@string/reason"
+            android:visibility="gone"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintBottom_toBottomOf="@id/sspreason"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/sspreason" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtcollon2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:text="@string/colon"
+            android:visibility="gone"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintBottom_toBottomOf="@id/sspreason"
+            app:layout_constraintStart_toEndOf="@+id/txtreasonlbl"
+            app:layout_constraintTop_toTopOf="@id/sspreason" />
+
+        <com.twd.multispinnerfilter.SingleSpinnerSearch
+            android:id="@+id/sspreason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:background="@drawable/spinnerstyle"
+            android:contentDescription="@string/select"
+            app:hintText="@string/select"
+            android:visibility="gone"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtcollon2"
+            app:layout_constraintTop_toBottomOf="@+id/txttotalwaitingval"
+            app:textColor="@color/black" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btncancelreceipt"
+            style="@style/App_ButtonRedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/minwidth"
+            android:visibility="gone"
+            android:text="@string/cancelregistration"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sspreason" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgphoto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:visibility="gone"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btncancelreceipt" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".SuccessActivity">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_success" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txttotalarea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtkarkhana"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="52dp"
+            tools:layout_editor_absoluteY="38dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtsuccess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/savesucess"
+            tools:layout_editor_absoluteX="52dp"
+            tools:layout_editor_absoluteY="38dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtofflineplotno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/plotnooffline"
+            android:textSize="@dimen/textsizehead"
+            tools:layout_editor_absoluteX="52dp"
+            tools:layout_editor_absoluteY="38dp" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnnextsuccess"
+                style="@style/App_ButtonGreenStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/control_margin"
+                android:layout_weight="1"
+                android:text="@string/newform"
+                android:textSize="@dimen/normaltext" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnnextmain"
+                style="@style/App_ButtonRedStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/control_margin"
+                android:layout_weight="1"
+                android:text="@string/exit"
+                android:textSize="@dimen/normaltext" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</ScrollView>

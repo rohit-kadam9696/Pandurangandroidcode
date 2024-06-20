@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NondConfirmListActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clstep1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clfarmer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/control_margin"
+                android:background="@color/bggrey"
+                android:paddingTop="@dimen/normal_margin"
+                android:paddingBottom="@dimen/normal_margin"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtseasonlbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal_margin"
+                    android:minWidth="@dimen/minwidth"
+                    android:text="@string/season"
+                    android:textSize="@dimen/normaltext"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtnclcollon1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal_margin"
+                    android:text="@string/colon"
+                    android:textSize="@dimen/normaltext"
+                    app:layout_constraintLeft_toRightOf="@+id/txtseasonlbl"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtseasonval"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal_margin"
+                    android:textSize="@dimen/normaltext"
+                    app:layout_constraintLeft_toRightOf="@+id/txtnclcollon1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtfarmercodelbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal_margin"
+                    android:minWidth="@dimen/minwidth"
+                    android:text="@string/farmercode"
+                    android:textSize="@dimen/normaltext"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtseasonlbl" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtnclcollon2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal_margin"
+                    android:text="@string/colon"
+                    android:textSize="@dimen/normaltext"
+                    app:layout_constraintLeft_toRightOf="@+id/txtfarmercodelbl"
+                    app:layout_constraintTop_toBottomOf="@id/txtnclcollon1" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtfarmercodetxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal_margin"
+                    android:textSize="@dimen/normaltext"
+                    app:layout_constraintLeft_toRightOf="@+id/txtnclcollon2"
+                    app:layout_constraintTop_toBottomOf="@+id/txtseasonval" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtfarmernamelbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal_margin"
+                    android:minWidth="@dimen/minwidth"
+                    android:text="@string/farmername"
+                    android:textSize="@dimen/normaltext"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtfarmercodelbl" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtnclcollon3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal_margin"
+                    android:text="@string/colon"
+                    android:textSize="@dimen/normaltext"
+                    app:layout_constraintLeft_toRightOf="@+id/txtfarmernamelbl"
+                    app:layout_constraintTop_toBottomOf="@id/txtnclcollon2" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtfarmernametxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal_margin"
+                    android:textSize="@dimen/normaltext"
+                    app:layout_constraintLeft_toRightOf="@+id/txtnclcollon3"
+                    app:layout_constraintTop_toBottomOf="@+id/txtfarmercodetxt" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtvillagelbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal_margin"
+                    android:minWidth="@dimen/minwidth"
+                    android:text="@string/village"
+                    android:textSize="@dimen/normaltext"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtfarmernamelbl" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtnclcollon4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal_margin"
+                    android:text="@string/colon"
+                    android:textSize="@dimen/normaltext"
+                    app:layout_constraintLeft_toRightOf="@+id/txtvillagelbl"
+                    app:layout_constraintTop_toBottomOf="@id/txtnclcollon3" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtvillagetxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal_margin"
+                    android:textSize="@dimen/normaltext"
+                    app:layout_constraintLeft_toRightOf="@+id/txtnclcollon4"
+                    app:layout_constraintTop_toBottomOf="@+id/txtfarmernametxt" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtsectionlbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal_margin"
+                    android:minWidth="@dimen/minwidth"
+                    android:text="@string/section"
+                    android:textSize="@dimen/normaltext"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtvillagelbl" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtnclcollon5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal_margin"
+                    android:text="@string/colon"
+                    android:textSize="@dimen/normaltext"
+                    app:layout_constraintLeft_toRightOf="@+id/txtsectionlbl"
+                    app:layout_constraintTop_toBottomOf="@id/txtnclcollon4" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtsectiontxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal_margin"
+                    android:textSize="@dimen/normaltext"
+                    app:layout_constraintLeft_toRightOf="@+id/txtnclcollon5"
+                    app:layout_constraintTop_toBottomOf="@+id/txtvillagetxt" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <include layout="@layout/common_mrecylerview" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

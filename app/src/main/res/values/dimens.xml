@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="control_margin">10dp</dimen>
+    <dimen name="textboxsize">18sp</dimen>
+
+    <dimen name="smalltext">12dp</dimen>
+    <dimen name="extramargin">40dp</dimen>
+    <dimen name="doubleextramargin">80dp</dimen>
+    <dimen name="extramargins">30dp</dimen>
+    <dimen name="edittextstorkewidth">2dp</dimen>
+    <dimen name="edittextcornor">5dp</dimen>
+    <dimen name="edittextpaddingstyle">10dp</dimen>
+    <dimen name="btncornorredius">5dp</dimen>
+    <dimen name="btnstrock">1dp</dimen>
+    <dimen name="buttonsizewidth">80sp</dimen>
+    <dimen name="buttonsizeheight">40sp</dimen>
+    <dimen name="btnpaddingstyle">10dp</dimen>
+    <dimen name="btnsize">18dp</dimen>
+    <dimen name="layer2storkewidth">2dp</dimen>
+    <dimen name="layer2cornorredius">3dp</dimen>
+    <dimen name="textboxpadding">7dp</dimen>
+    <dimen name="borderstork">5dp</dimen>
+    <dimen name="layer1cornorredius">3dp</dimen>
+    <dimen name="normaltext">20sp</dimen>
+    <dimen name="snormaltext">18sp</dimen>
+    <dimen name="xxnormaltext">24sp</dimen>
+    <dimen name="textsizehead">30sp</dimen>
+    <dimen name="xxsmalltext">12sp</dimen>
+    <dimen name="xxheadtext">26sp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="ssnormaltext">17sp</dimen>
+    <dimen name="spinnercornor">5dp</dimen>
+    <dimen name="spinnerpaddingleft">10dp</dimen>
+    <dimen name="spinnerstorkewidth">1dip</dimen>
+    <dimen name="spinnericonright">10dp</dimen>
+    <dimen name="normal_margin">5dp</dimen>
+    <dimen name="min_margin">1dp</dimen>
+    <dimen name="minwidth">130dp</dimen>
+    <dimen name="width150">150dp</dimen>
+    <dimen name="minwidth2">120dp</dimen>
+    <dimen name="width">230dp</dimen>
+    <dimen name="height">35dp</dimen>
+    <dimen name="minheightmap">372dp</dimen>
+    <dimen name="minwidthmin">85dp</dimen>
+    <dimen name="minwidthmin2">75dp</dimen>
+    <dimen name="minwidthmin3">70dp</dimen>
+    <dimen name="borderstorkwidth">1dp</dimen>
+    <dimen name="borderpadding">5dp</dimen>
+    <dimen name="borderstorkwidthpdf">0.2dp</dimen>
+    <dimen name="borderpaddingpdf">0.2dp</dimen>
+    <dimen name="borderpaddinglrpdf">1dp</dimen>
+
+</resources>

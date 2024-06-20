@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FarmerInfoActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clfarmer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/control_margin"
+        android:background="@color/bggrey"
+        android:padding="@dimen/normal_margin"
+        android:paddingTop="@dimen/control_margin"
+        android:paddingBottom="@dimen/control_margin"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtfarmercodelbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:minWidth="@dimen/minwidth"
+            android:padding="@dimen/normal_margin"
+            android:text="@string/farmercode"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtfarmercodetxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:padding="@dimen/normal_margin"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintLeft_toRightOf="@+id/txtfarmercodelbl"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtfarmernamelbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:minWidth="@dimen/minwidth"
+            android:padding="@dimen/normal_margin"
+            android:text="@string/farmername"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtfarmercodelbl" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtfarmernametxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:padding="@dimen/normal_margin"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintLeft_toRightOf="@+id/txtfarmernamelbl"
+            app:layout_constraintTop_toBottomOf="@+id/txtfarmercodetxt" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtfarmervilllbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:minWidth="@dimen/minwidth"
+            android:padding="@dimen/normal_margin"
+            android:text="@string/village"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtfarmernamelbl" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtfarmervilltxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:padding="@dimen/normal_margin"
+            android:textSize="@dimen/normaltext"
+            app:layout_constraintLeft_toRightOf="@+id/txtfarmervilllbl"
+            app:layout_constraintTop_toBottomOf="@+id/txtfarmernametxt" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llbtnpanel1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clfarmer">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnbirthday"
+            style="@style/App_ButtonBlueStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:layout_weight="1"
+            android:text="@string/birthday" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnmobileno"
+            style="@style/App_ButtonBlueStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:layout_weight="1"
+            android:text="@string/mobilenochange" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llbtnpanel2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llbtnpanel1">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnadharcard"
+            style="@style/App_ButtonBlueStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:layout_weight="1"
+            android:text="@string/adharcardchange" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnbankinfo"
+            style="@style/App_ButtonBlueStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:visibility="invisible"
+            android:layout_weight="1"
+            android:text="@string/bankinfo" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnback"
+        style="@style/App_ButtonRedStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/control_margin"
+        android:layout_weight="1"
+        android:text="@string/back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llbtnpanel2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HarvFarmerTonnageActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".HarvFarmerTonnageActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clrptfilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:background="@color/bggrey"
+            android:nestedScrollingEnabled="false"
+            android:padding="@dimen/normal_margin"
+            android:paddingTop="@dimen/control_margin"
+            android:paddingBottom="@dimen/control_margin"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtseason"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:minWidth="@dimen/minwidthmin"
+                android:text="@string/season"
+                android:textSize="@dimen/snormaltext"
+                app:layout_constraintBottom_toBottomOf="@id/txtseasonval"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@id/txtseasonval" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtseasonval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:textSize="@dimen/snormaltext"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtseason"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtfarmercodelbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:minWidth="@dimen/minwidthmin"
+                android:text="@string/farmercode"
+                android:textSize="@dimen/snormaltext"
+                app:layout_constraintBottom_toBottomOf="@id/edtfarmercode"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@id/edtfarmercode" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtfarmercode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:hint="@string/farmercodehint"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="10"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtfarmercodelbl"
+                app:layout_constraintTop_toBottomOf="@id/txtseasonval"
+                app:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/imgsearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_accept"
+                app:layout_constraintBottom_toBottomOf="@id/edtfarmercode"
+                app:layout_constraintEnd_toEndOf="@id/edtfarmercode"
+                app:layout_constraintTop_toTopOf="@id/edtfarmercode" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtfarmername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:minWidth="@dimen/minwidthmin"
+                android:text="@string/farmername"
+                android:textSize="@dimen/snormaltext"
+                app:layout_constraintBottom_toBottomOf="@id/actfarmername"
+                app:layout_constraintEnd_toEndOf="@+id/txtfarmercodelbl"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtfarmercodelbl"
+                app:layout_constraintTop_toTopOf="@id/actfarmername" />
+
+            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/actfarmername"
+                style="@style/App_EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:textSize="@dimen/snormaltext"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtfarmername"
+                app:layout_constraintTop_toBottomOf="@+id/edtfarmercode" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/imgnamesearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_search"
+                app:layout_constraintBottom_toBottomOf="@id/actfarmername"
+                app:layout_constraintEnd_toEndOf="@id/actfarmername"
+                app:layout_constraintTop_toTopOf="@id/actfarmername" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcplotton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clrptfilter" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btntonnagedetails"
+            style="@style/App_ButtonBlueStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/detailsinformation"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rcplotton" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

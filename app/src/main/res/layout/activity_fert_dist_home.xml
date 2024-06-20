@@ -1,0 +1,284 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FertDistHomeActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtlocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/control_margin"
+            android:layout_marginTop="@dimen/control_margin"
+            android:layout_marginEnd="@dimen/control_margin"
+            android:paddingTop="@dimen/control_margin"
+            android:text="@string/location"
+            android:textSize="@dimen/xxnormaltext"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtfarmercode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/control_margin"
+            android:layout_marginTop="@dimen/control_margin"
+            android:layout_marginEnd="@dimen/control_margin"
+            android:paddingTop="@dimen/control_margin"
+            android:text="@string/farmercode"
+            android:textSize="@dimen/xxnormaltext"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtlocation" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtfarmercode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/extramargin"
+            android:layout_marginTop="@dimen/control_margin"
+            android:layout_marginEnd="@dimen/extramargin"
+            android:hint="@string/farmercodehint"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtfarmercode" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtscanfarmer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/control_margin"
+            android:layout_marginTop="@dimen/control_margin"
+            android:layout_marginEnd="@dimen/control_margin"
+            android:paddingTop="@dimen/control_margin"
+            android:text="@string/scanfarmercode"
+            android:textSize="@dimen/xxnormaltext"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtfarmercode" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgscanfarmer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/extramargin"
+            android:layout_marginTop="@dimen/control_margin"
+            android:layout_marginEnd="@dimen/extramargin"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_qrcode"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtscanfarmer" />
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llbutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/extramargin"
+            android:layout_marginTop="@dimen/extramargin"
+            android:layout_marginEnd="@dimen/extramargin"
+            android:paddingTop="@dimen/control_margin"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgscanfarmer">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnreset"
+                style="@style/App_ButtonRedStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/control_margin"
+                android:layout_weight="1"
+                android:text="@string/reset" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnsubmit"
+                style="@style/App_ButtonGreenStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/control_margin"
+                android:layout_weight="1"
+                android:text="@string/submit" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/llfarmerinfo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/control_margin"
+            android:background="@color/bggrey"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llbutton">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtdatelbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:paddingTop="@dimen/normal_margin"
+                android:paddingBottom="@dimen/normal_margin"
+                android:text="@string/date"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtfvrcollon01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:paddingTop="@dimen/normal_margin"
+                android:paddingBottom="@dimen/normal_margin"
+                android:text="@string/colon"
+                app:layout_constraintLeft_toRightOf="@+id/txtdatelbl"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtdatetxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:paddingTop="@dimen/normal_margin"
+                android:paddingBottom="@dimen/normal_margin"
+                app:layout_constraintLeft_toRightOf="@+id/txtfvrcollon01"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtyearlbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:paddingTop="@dimen/normal_margin"
+                android:paddingBottom="@dimen/normal_margin"
+                android:text="@string/economicyear"
+                app:layout_constraintLeft_toRightOf="@+id/txtdatetxt"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtfvrcollon02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:paddingTop="@dimen/normal_margin"
+                android:paddingBottom="@dimen/normal_margin"
+                android:text="@string/colon"
+                app:layout_constraintLeft_toRightOf="@+id/txtyearlbl"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtyeartxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:paddingTop="@dimen/normal_margin"
+                android:paddingBottom="@dimen/normal_margin"
+                app:layout_constraintLeft_toRightOf="@+id/txtfvrcollon02"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtfarmercodelbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:minWidth="@dimen/minwidthmin"
+                android:paddingTop="@dimen/normal_margin"
+                android:paddingBottom="@dimen/normal_margin"
+                android:text="@string/farmercode"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtdatelbl" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtfvrcollon03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:paddingTop="@dimen/normal_margin"
+                android:paddingBottom="@dimen/normal_margin"
+                android:text="@string/colon"
+                app:layout_constraintLeft_toRightOf="@+id/txtfarmercodelbl"
+                app:layout_constraintTop_toBottomOf="@+id/txtdatelbl" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtfarmercodetxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:paddingTop="@dimen/normal_margin"
+                android:paddingBottom="@dimen/normal_margin"
+                app:layout_constraintLeft_toRightOf="@+id/txtfvrcollon03"
+                app:layout_constraintTop_toBottomOf="@+id/txtdatelbl" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtfarmernamelbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:minWidth="@dimen/minwidthmin"
+                android:paddingTop="@dimen/normal_margin"
+                android:paddingBottom="@dimen/normal_margin"
+                android:text="@string/farmername"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtfarmercodelbl" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtfvrcollon04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:paddingTop="@dimen/normal_margin"
+                android:paddingBottom="@dimen/normal_margin"
+                android:text="@string/colon"
+                app:layout_constraintLeft_toRightOf="@+id/txtfarmernamelbl"
+                app:layout_constraintTop_toBottomOf="@+id/txtfarmercodelbl" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtfarmernametxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:minWidth="@dimen/minwidth"
+                android:paddingTop="@dimen/normal_margin"
+                android:paddingBottom="@dimen/normal_margin"
+                app:layout_constraintLeft_toRightOf="@+id/txtfvrcollon04"
+                app:layout_constraintTop_toBottomOf="@+id/txtfarmercodelbl" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnnext"
+            style="@style/App_ButtonGreenStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/control_margin"
+            android:layout_marginTop="@dimen/control_margin"
+            android:layout_weight="1"
+            android:minWidth="@dimen/minwidth"
+            android:text="@string/next"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llfarmerinfo" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

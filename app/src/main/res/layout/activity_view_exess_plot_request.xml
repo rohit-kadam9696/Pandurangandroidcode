@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewExessPlotRequestActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clinfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:background="@color/bggrey"
+            android:padding="@dimen/normal_margin"
+            android:paddingTop="@dimen/control_margin"
+            android:paddingBottom="@dimen/control_margin"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtplotnolbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/control_margin"
+                android:minWidth="@dimen/minwidth"
+                android:padding="@dimen/normal_margin"
+                android:text="@string/plotno"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtplotnotxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/control_margin"
+                android:padding="@dimen/normal_margin"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintLeft_toRightOf="@+id/txtplotnolbl"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtfarmernamelbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/control_margin"
+                android:minWidth="@dimen/minwidth"
+                android:padding="@dimen/normal_margin"
+                android:text="@string/farmername"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtplotnolbl" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtfarmernametxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/control_margin"
+                android:padding="@dimen/normal_margin"
+                android:textSize="@dimen/normaltext"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtfarmernamelbl"
+                app:layout_constraintTop_toBottomOf="@+id/txtplotnotxt" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtarealbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/control_margin"
+                android:minWidth="@dimen/minwidth"
+                android:padding="@dimen/normal_margin"
+                android:text="@string/area"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtfarmernametxt" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtareatxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/control_margin"
+                android:padding="@dimen/normal_margin"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintLeft_toRightOf="@+id/txtarealbl"
+                app:layout_constraintTop_toBottomOf="@+id/txtfarmernametxt" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txttentativetonnage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/control_margin"
+                android:minWidth="@dimen/minwidth"
+                android:padding="@dimen/normal_margin"
+                android:text="@string/approxtonnage"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtarealbl" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txttentativetonnagetxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/control_margin"
+                android:padding="@dimen/normal_margin"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintLeft_toRightOf="@+id/txttentativetonnage"
+                app:layout_constraintTop_toBottomOf="@+id/txtareatxt" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtextendedtonnage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/control_margin"
+                android:minWidth="@dimen/minwidth"
+                android:padding="@dimen/normal_margin"
+                android:text="@string/extendedtonnage"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txttentativetonnage" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtextendedtonnagetxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/control_margin"
+                android:padding="@dimen/normal_margin"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintLeft_toRightOf="@+id/txtextendedtonnage"
+                app:layout_constraintTop_toBottomOf="@+id/txttentativetonnagetxt" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtextendedtonnagelbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/control_margin"
+                android:padding="@dimen/normal_margin"
+                android:text="@string/upto"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintLeft_toRightOf="@+id/txtextendedtonnagetxt"
+                app:layout_constraintTop_toBottomOf="@+id/txttentativetonnagetxt" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtharvestedtonnage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/control_margin"
+                android:minWidth="@dimen/minwidth"
+                android:padding="@dimen/normal_margin"
+                android:text="@string/harvestedtonnage"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtextendedtonnage" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtharvestedtonnageval"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/control_margin"
+                android:padding="@dimen/normal_margin"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintLeft_toRightOf="@+id/txtharvestedtonnage"
+                app:layout_constraintTop_toBottomOf="@+id/txtextendedtonnagetxt" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txttonnage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/control_margin"
+                android:minWidth="@dimen/minwidth"
+                android:padding="@dimen/normal_margin"
+                android:text="@string/remaingtonnage"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtharvestedtonnage" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txttonnagetxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/control_margin"
+                android:padding="@dimen/normal_margin"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintStart_toEndOf="@+id/txttonnage"
+                app:layout_constraintTop_toBottomOf="@+id/txtharvestedtonnageval" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtreasonlbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/control_margin"
+                android:minWidth="@dimen/minwidth"
+                android:padding="@dimen/normal_margin"
+                android:text="@string/reason"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txttonnage" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtreasontxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/control_margin"
+                android:padding="@dimen/normal_margin"
+                android:textSize="@dimen/normaltext"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtreasonlbl"
+                app:layout_constraintTop_toBottomOf="@+id/txttonnagetxt"
+                app:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtdeptheadlbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/control_margin"
+                android:minWidth="@dimen/minwidth"
+                android:padding="@dimen/normal_margin"
+                android:text="@string/depthead"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtreasontxt" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtdeptheadtxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/control_margin"
+                android:padding="@dimen/normal_margin"
+                android:textSize="@dimen/normaltext"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtreasonlbl"
+                app:layout_constraintTop_toBottomOf="@+id/txtreasontxt"
+                app:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtallowedtonnage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/control_margin"
+                android:minWidth="@dimen/minwidth"
+                android:padding="@dimen/normal_margin"
+                android:text="@string/allowedtonnage"
+                android:textSize="@dimen/normaltext"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtdeptheadtxt" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtallowedtonnage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:hint="@string/allowedtonnage"
+                android:inputType="numberDecimal"
+                android:maxLength="7"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtallowedtonnage"
+                app:layout_constraintTop_toBottomOf="@+id/txtdeptheadtxt" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llbtns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/control_margin"
+            android:background="@color/bggrey"
+            android:orientation="horizontal"
+            android:padding="@dimen/normal_margin"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clinfo">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnreject"
+                style="@style/App_ButtonRedStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:layout_weight="1"
+                android:text="@string/reject"
+                android:textSize="@dimen/normaltext"
+                android:visibility="visible" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnaccept"
+                style="@style/App_ButtonGreenStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_margin"
+                android:layout_weight="1"
+                android:text="@string/accept"
+                android:textSize="@dimen/normaltext"
+                android:visibility="visible" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

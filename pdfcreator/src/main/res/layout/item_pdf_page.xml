@@ -1,0 +1,4 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutPDFParent"
+    android:layout_width="@dimen/pdf_width"
+    android:layout_height="@dimen/pdf_height" />

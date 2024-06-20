@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:top="-2dp">
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="@dimen/borderstorkwidthpdf"
+                android:color="@color/black" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <padding
+                android:bottom="@dimen/borderpaddingpdf"
+                android:left="@dimen/borderpaddinglrpdf"
+                android:right="@dimen/borderpaddinglrpdf"
+                android:top="@dimen/borderpaddingpdf" />
+        </shape>
+    </item>
+
+
+</layer-list>

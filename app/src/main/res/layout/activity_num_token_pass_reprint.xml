@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NumTokenPassReprintActivity">
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txthead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/tokenpassreprint"
+        android:textSize="@dimen/textsizehead"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rgprinttype"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txthead">
+
+        <RadioButton
+            android:id="@+id/rbtoken"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:minWidth="@dimen/minwidth"
+            android:text="@string/token"
+            android:textSize="@dimen/normaltext" />
+
+        <RadioButton
+            android:id="@+id/rbpass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:minWidth="@dimen/minwidth"
+            android:text="@string/troughpass"
+            android:textSize="@dimen/normaltext" />
+
+    </RadioGroup>
+
+
+    <RadioGroup
+        android:id="@+id/rgvehicletype"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rgprinttype">
+
+        <RadioButton
+            android:id="@+id/rbtranporter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:layout_weight="1"
+            android:text="@string/transporter"
+            android:textSize="@dimen/normaltext" />
+
+        <RadioButton
+            android:id="@+id/rbbulluckcart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:layout_weight="1"
+            android:text="@string/gadiwan"
+            android:textSize="@dimen/normaltext" />
+
+    </RadioGroup>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtcodelbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/control_margin"
+        android:layout_marginEnd="@dimen/control_margin"
+        android:minWidth="@dimen/minwidthmin"
+        android:text="@string/code"
+        android:textSize="@dimen/normaltext"
+        app:layout_constraintBottom_toBottomOf="@id/edtcode"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/edtcode" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtcode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/normal_margin"
+        android:hint="@string/entercode"
+        android:inputType="numberDecimal"
+        android:maxLength="6"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtcodelbl"
+        app:layout_constraintTop_toBottomOf="@id/rgvehicletype"
+        app:textColor="@color/black" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnback"
+        style="@style/App_ButtonRedStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/control_margin"
+        android:layout_weight="1"
+        android:text="@string/cancel"
+        android:textSize="@dimen/normaltext"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtcode"
+        app:layout_constraintWidth_percent="0.45" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnsubmit"
+        style="@style/App_ButtonGreenStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/control_margin"
+        android:layout_weight="1"
+        android:text="@string/submit"
+        android:textSize="@dimen/normaltext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtcode"
+        app:layout_constraintWidth_percent="0.45" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
